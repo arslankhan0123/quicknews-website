@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick News Global</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="font-body text-white antialiased">
+    <div
+      class="relative min-h-screen overflow-hidden bg-[url('./assets/images/invest/hero-banner-bg.png')] bg-no-repeat bg-cover"
+      style="background-position: top left"
+    >
+      <!-- ================= NAVBAR ================= -->
+      <header class="pt-4 md:pt-6 lg:pt-10 relative z-50">
+        <div class="container mx-auto px-4">
+          <nav
+            class="flex items-center justify-between gap-[24px] xl:gap-[40px] rounded-[24px] border border-solid border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.06)] px-6 py-[19px] backdrop-blur-[24.7px] relative"
+          >
+            <!-- Logo -->
+            <a href="./" class="shrink-0">
+              <img
+                src="./assets/images/logos/quick-news.svg"
+                alt="Quick News"
+              />
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <div class="flex-1 hidden lg:flex items-center justify-between">
+              <ul class="flex items-center gap-5 xl:gap-10 font-bold text-sm">
+                <li>
+                  <a
+                    href="./"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/quick-verify.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Verify AI</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about-us.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Our Vision</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/partnership.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Partnership</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/invest.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Invest</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/donate-now.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Donate</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Our Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+
+              <a
+                href="#"
+                class="btn btn-secondary shadow-custom-glow !px-6 xl:!px-10 flex items-center gap-2 btn-overlay"
+              >
+                Download the App
+                <img
+                  src="./assets/images/icons/light-blue-arrow-right.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+              </a>
+            </div>
+
+            <!-- Hamburger Toggle Button (Visible on Mobile/Tablet < lg) -->
+            <button
+              type="button"
+              id="menu-toggle-btn"
+              aria-label="Toggle navigation"
+              class="lg:hidden p-2 rounded-xl bg-white/10 text-white hover:bg-white/20 focus:outline-none transition-all"
+            >
+              <!-- Hamburger Icon (Default) -->
+              <svg
+                id="hamburger-icon"
+                class="w-6 h-6 stroke-current"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+
+              <!-- Close Cross Icon (Hidden by default) -->
+              <svg
+                id="close-icon"
+                class="w-6 h-6 stroke-current hidden"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <!-- Mobile Dropdown Menu Drawer -->
+            <div
+              id="mobile-menu"
+              class="hidden absolute top-[calc(100%+12px)] left-0 right-0 w-full rounded-[24px] border border-white/20 bg-[#1c1775]/95 backdrop-blur-2xl p-6 shadow-2xl flex-col gap-5 lg:hidden z-50 transition-all duration-300"
+            >
+              <ul class="flex flex-col gap-3 font-bold text-base text-white">
+                <li>
+                  <a
+                    href="./"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/quick-verify.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Verify AI</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about-us.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Our Vision</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/partnership.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Partnership</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/invest.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Invest</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/donate-now.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Donate</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Our Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+
+              <hr class="border-white/15 my-1" />
+
+              <a
+                href="#"
+                class="btn btn-secondary shadow-custom-glow btn-overlay w-full justify-center !py-3 flex items-center gap-2"
+              >
+                Download the App
+                <img
+                  src="./assets/images/icons/light-blue-arrow-right.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- ================= HERO ================= -->
+      <section class="hero-banner pt-4 md:pt-6 lg:pt-[49px] relative">
+        <div class="container text-center text-light-950">
+          <div
+            class="py-[71px] relative bg-[linear-gradient(180deg,#2A03D8_0%,#251BA5_100%)] rounded-[40px] overflow-hidden before:content-[url('./assets/images/partnership-inquiry/grid-lines.png')] before:absolute before:top-0 before:left-0"
+          >
+            <div class="absolute top-0 left-0">
+              <img
+                src="./assets/images/partnership-inquiry/hero-banner-shape.png"
+                alt=""
+                class="max-w-[70%] lg:max-w-full h-auto"
+              />
+            </div>
+            <div class="flex flex-col gap-4 sticky px-4">
+              <h1>Invest With Global Quick</h1>
+              <p class="w-full max-w-[557px] mx-auto">
+                Thank you for your interest in investing with Global Quick.
+                Please fill out the form below to help us understand your
+                organization and explore potential collaborations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pt-6 lg:pt-10 pb-[60px] lg:pb-[130px]">
+        <div class="container text-light-950">
+          <div
+            class="bg-[rgba(255,255,255,0.06)] p-6 lg:p-[40px] border border-solid border-[rgba(255,255,255,0.20)] rounded-[24px] backdrop-blur-[12.350000381469727px]"
+          >
+            <h2
+              class="text-center !text-[26px] md:!text-[32px] lg:!text-[40px] !leading-[34px] md:!leading-[38px] lg:!leading-[48px] !font-weight-bold"
+            >
+              Invest with us
+            </h2>
+
+            <form class="space-y-6 lg:space-y-10">
+              <!-- Section: Invest with us -->
+
+              <!-- Question 1: Radio Button -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-3"
+                >
+                  Have you or your organization previously made investments in
+                  companies/startups?
+                </label>
+                <div class="flex items-center gap-2">
+                  <!-- Radio Option: Yes -->
+                  <label
+                    class="flex items-center gap-2 cursor-pointer select-none bg-[rgba(255,255,255,0.06)] py-6 px-4"
+                  >
+                    <div
+                      class="relative flex items-center justify-center shrink-0"
+                    >
+                      <!-- Input peer yahan inner element hai -->
+                      <input
+                        type="radio"
+                        name="previous_investment"
+                        value="yes"
+                        class="sr-only peer"
+                      />
+                      <!-- Outer SVG Ring -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        class="text-white"
+                      >
+                        <path
+                          d="M9.99967 18.3334C11.1525 18.3334 12.2358 18.1146 13.2497 17.6771C14.2636 17.2396 15.1455 16.6459 15.8955 15.8959C16.6455 15.1459 17.2393 14.2639 17.6768 13.25C18.1143 12.2361 18.333 11.1528 18.333 10C18.333 8.84724 18.1143 7.76391 17.6768 6.75002C17.2393 5.73613 16.6455 4.85419 15.8955 4.10419C15.1455 3.35419 14.2636 2.76044 13.2497 2.32294C12.2358 1.88544 11.1525 1.66669 9.99967 1.66669C8.8469 1.66669 7.76356 1.88544 6.74967 2.32294C5.73579 2.76044 4.85384 3.35419 4.10384 4.10419C3.35384 4.85419 2.76009 5.73613 2.32259 6.75002C1.88509 7.76391 1.66634 8.84724 1.66634 10C1.66634 11.1528 1.88509 12.2361 2.32259 13.25C2.76009 14.2639 3.35384 15.1459 4.10384 15.8959C4.85384 16.6459 5.73579 17.2396 6.74967 17.6771C7.76356 18.1146 8.8469 18.3334 9.99967 18.3334ZM9.99967 16.6667C8.13856 16.6667 6.56217 16.0209 5.27051 14.7292C3.97884 13.4375 3.33301 11.8611 3.33301 10C3.33301 8.13891 3.97884 6.56252 5.27051 5.27085C6.56217 3.97919 8.13856 3.33335 9.99967 3.33335C11.8608 3.33335 13.4372 3.97919 14.7288 5.27085C16.0205 6.56252 16.6663 8.13891 16.6663 10C16.6663 11.8611 16.0205 13.4375 14.7288 14.7292C13.4372 16.0209 11.8608 16.6667 9.99967 16.6667Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <!-- Center Active Dot -->
+                      <div
+                        class="absolute w-2.5 h-2.5 rounded-full bg-white opacity-0 peer-checked:opacity-100"
+                      ></div>
+                    </div>
+                    <span class="text-[16px] font-normal text-white">Yes</span>
+                  </label>
+
+                  <!-- Radio Option: No -->
+                  <label
+                    class="flex items-center gap-2 cursor-pointer select-none bg-[rgba(255,255,255,0.06)] py-6 px-4"
+                  >
+                    <div
+                      class="relative flex items-center justify-center shrink-0"
+                    >
+                      <input
+                        type="radio"
+                        name="previous_investment"
+                        value="no"
+                        class="sr-only peer"
+                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        class="text-white"
+                      >
+                        <path
+                          d="M9.99967 18.3334C11.1525 18.3334 12.2358 18.1146 13.2497 17.6771C14.2636 17.2396 15.1455 16.6459 15.8955 15.8959C16.6455 15.1459 17.2393 14.2639 17.6768 13.25C18.1143 12.2361 18.333 11.1528 18.333 10C18.333 8.84724 18.1143 7.76391 17.6768 6.75002C17.2393 5.73613 16.6455 4.85419 15.8955 4.10419C15.1455 3.35419 14.2636 2.76044 13.2497 2.32294C12.2358 1.88544 11.1525 1.66669 9.99967 1.66669C8.8469 1.66669 7.76356 1.88544 6.74967 2.32294C5.73579 2.76044 4.85384 3.35419 4.10384 4.10419C3.35384 4.85419 2.76009 5.73613 2.32259 6.75002C1.88509 7.76391 1.66634 8.84724 1.66634 10C1.66634 11.1528 1.88509 12.2361 2.32259 13.25C2.76009 14.2639 3.35384 15.1459 4.10384 15.8959C4.85384 16.6459 5.73579 17.2396 6.74967 17.6771C7.76356 18.1146 8.8469 18.3334 9.99967 18.3334ZM9.99967 16.6667C8.13856 16.6667 6.56217 16.0209 5.27051 14.7292C3.97884 13.4375 3.33301 11.8611 3.33301 10C3.33301 8.13891 3.97884 6.56252 5.27051 5.27085C6.56217 3.97919 8.13856 3.33335 9.99967 3.33335C11.8608 3.33335 13.4372 3.97919 14.7288 5.27085C16.0205 6.56252 16.6663 8.13891 16.6663 10C16.6663 11.8611 16.0205 13.4375 14.7288 14.7292C13.4372 16.0209 11.8608 16.6667 9.99967 16.6667Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <div
+                        class="absolute w-2.5 h-2.5 rounded-full bg-white opacity-0 peer-checked:opacity-100"
+                      ></div>
+                    </div>
+                    <span class="text-[16px] font-normal text-white">No</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Question 2 -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-2"
+                >
+                  If yes, in which industries have you or your organization
+                  primarily invested?
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type an answer..."
+                  class="w-full bg-[rgba(255,255,255,0.12)] text-[16px] font-normal px-4 py-[23.5px] placeholder-light-950 placeholder:text-[16px] placeholder:font-normal focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-offset-0 transition-all"
+                />
+              </div>
+
+              <!-- Question 3 -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-2"
+                >
+                  What is your/firm's level of experience with investments
+                  specifically within the Technology sector, with a particular
+                  emphasis on AI?
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type an answer..."
+                  class="w-full bg-[rgba(255,255,255,0.12)] text-[16px] font-normal px-4 py-[23.5px] placeholder-light-950 placeholder:text-[16px] placeholder:font-normal focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-offset-0 transition-all"
+                />
+              </div>
+
+              <!-- Question 4 -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-2"
+                >
+                  What are your primary investment interests and criteria when
+                  evaluating potential opportunities?
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type an answer..."
+                  class="w-full bg-[rgba(255,255,255,0.12)] text-[16px] font-normal px-4 py-[23.5px] placeholder-light-950 placeholder:text-[16px] placeholder:font-normal focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-offset-0 transition-all"
+                />
+              </div>
+
+              <!-- Question 5 -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-2"
+                >
+                  Beyond capital, what additional resources, strategic
+                  expertise, or network connections might you or your
+                  organization bring to portfolio companies?
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type an answer..."
+                  class="w-full bg-[rgba(255,255,255,0.12)] text-[16px] font-normal px-4 py-[23.5px] placeholder-light-950 placeholder:text-[16px] placeholder:font-normal focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-offset-0 transition-all"
+                />
+              </div>
+
+              <!-- Question 6 -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-2"
+                >
+                  What specifically motivates your potential interest in
+                  investing in Quick News Global?
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type an answer..."
+                  class="w-full bg-[rgba(255,255,255,0.12)] text-[16px] font-normal px-4 py-[23.5px] placeholder-light-950 placeholder:text-[16px] placeholder:font-normal focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-offset-0 transition-all"
+                />
+              </div>
+
+              <!-- Question 7 -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-2"
+                >
+                  In the event of unforeseen negative news regarding Quick News
+                  Global's operational viability during a demanding period, what
+                  would be your immediate reaction and subsequent course of
+                  action as a potential investor?
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type an answer..."
+                  class="w-full bg-[rgba(255,255,255,0.12)] text-[16px] font-normal px-4 py-[23.5px] placeholder-light-950 placeholder:text-[16px] placeholder:font-normal focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-offset-0 transition-all"
+                />
+              </div>
+
+              <!-- Question 8 -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-2"
+                >
+                  Could you share the names of key partners or investment
+                  professionals within your firm who are involved in investment
+                  decisions?
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type an answer..."
+                  class="w-full bg-[rgba(255,255,255,0.12)] text-[16px] font-normal px-4 py-[23.5px] placeholder-light-950 placeholder:text-[16px] placeholder:font-normal focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-offset-0 transition-all"
+                />
+              </div>
+
+              <!-- Question 9: Radio Button -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-3"
+                >
+                  As part of our evaluation process and to build alignment for our long-term goals, would you be willing to allow our founder for a 45-day unpaid internship alongside you, key decision maker or your team?
+                </label>
+                <div class="flex items-center gap-2">
+                  <!-- Radio Option: Yes -->
+                  <label
+                    class="flex items-center gap-2 cursor-pointer select-none bg-[rgba(255,255,255,0.06)] py-6 px-4"
+                  >
+                    <div
+                      class="relative flex items-center justify-center shrink-0"
+                    >
+                      <!-- Input peer yahan inner element hai -->
+                      <input
+                        type="radio"
+                        name="unpaid_internship"
+                        value="yes"
+                        class="sr-only peer"
+                      />
+                      <!-- Outer SVG Ring -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        class="text-white"
+                      >
+                        <path
+                          d="M9.99967 18.3334C11.1525 18.3334 12.2358 18.1146 13.2497 17.6771C14.2636 17.2396 15.1455 16.6459 15.8955 15.8959C16.6455 15.1459 17.2393 14.2639 17.6768 13.25C18.1143 12.2361 18.333 11.1528 18.333 10C18.333 8.84724 18.1143 7.76391 17.6768 6.75002C17.2393 5.73613 16.6455 4.85419 15.8955 4.10419C15.1455 3.35419 14.2636 2.76044 13.2497 2.32294C12.2358 1.88544 11.1525 1.66669 9.99967 1.66669C8.8469 1.66669 7.76356 1.88544 6.74967 2.32294C5.73579 2.76044 4.85384 3.35419 4.10384 4.10419C3.35384 4.85419 2.76009 5.73613 2.32259 6.75002C1.88509 7.76391 1.66634 8.84724 1.66634 10C1.66634 11.1528 1.88509 12.2361 2.32259 13.25C2.76009 14.2639 3.35384 15.1459 4.10384 15.8959C4.85384 16.6459 5.73579 17.2396 6.74967 17.6771C7.76356 18.1146 8.8469 18.3334 9.99967 18.3334ZM9.99967 16.6667C8.13856 16.6667 6.56217 16.0209 5.27051 14.7292C3.97884 13.4375 3.33301 11.8611 3.33301 10C3.33301 8.13891 3.97884 6.56252 5.27051 5.27085C6.56217 3.97919 8.13856 3.33335 9.99967 3.33335C11.8608 3.33335 13.4372 3.97919 14.7288 5.27085C16.0205 6.56252 16.6663 8.13891 16.6663 10C16.6663 11.8611 16.0205 13.4375 14.7288 14.7292C13.4372 16.0209 11.8608 16.6667 9.99967 16.6667Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <!-- Center Active Dot -->
+                      <div
+                        class="absolute w-2.5 h-2.5 rounded-full bg-white opacity-0 peer-checked:opacity-100"
+                      ></div>
+                    </div>
+                    <span class="text-[16px] font-normal text-white">Yes</span>
+                  </label>
+
+                  <!-- Radio Option: No -->
+                  <label
+                    class="flex items-center gap-2 cursor-pointer select-none bg-[rgba(255,255,255,0.06)] py-6 px-4"
+                  >
+                    <div
+                      class="relative flex items-center justify-center shrink-0"
+                    >
+                      <input
+                        type="radio"
+                        name="unpaid_internship"
+                        value="no"
+                        class="sr-only peer"
+                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        class="text-white"
+                      >
+                        <path
+                          d="M9.99967 18.3334C11.1525 18.3334 12.2358 18.1146 13.2497 17.6771C14.2636 17.2396 15.1455 16.6459 15.8955 15.8959C16.6455 15.1459 17.2393 14.2639 17.6768 13.25C18.1143 12.2361 18.333 11.1528 18.333 10C18.333 8.84724 18.1143 7.76391 17.6768 6.75002C17.2393 5.73613 16.6455 4.85419 15.8955 4.10419C15.1455 3.35419 14.2636 2.76044 13.2497 2.32294C12.2358 1.88544 11.1525 1.66669 9.99967 1.66669C8.8469 1.66669 7.76356 1.88544 6.74967 2.32294C5.73579 2.76044 4.85384 3.35419 4.10384 4.10419C3.35384 4.85419 2.76009 5.73613 2.32259 6.75002C1.88509 7.76391 1.66634 8.84724 1.66634 10C1.66634 11.1528 1.88509 12.2361 2.32259 13.25C2.76009 14.2639 3.35384 15.1459 4.10384 15.8959C4.85384 16.6459 5.73579 17.2396 6.74967 17.6771C7.76356 18.1146 8.8469 18.3334 9.99967 18.3334ZM9.99967 16.6667C8.13856 16.6667 6.56217 16.0209 5.27051 14.7292C3.97884 13.4375 3.33301 11.8611 3.33301 10C3.33301 8.13891 3.97884 6.56252 5.27051 5.27085C6.56217 3.97919 8.13856 3.33335 9.99967 3.33335C11.8608 3.33335 13.4372 3.97919 14.7288 5.27085C16.0205 6.56252 16.6663 8.13891 16.6663 10C16.6663 11.8611 16.0205 13.4375 14.7288 14.7292C13.4372 16.0209 11.8608 16.6667 9.99967 16.6667Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <div
+                        class="absolute w-2.5 h-2.5 rounded-full bg-white opacity-0 peer-checked:opacity-100"
+                      ></div>
+                    </div>
+                    <span class="text-[16px] font-normal text-white">No</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Section: Personal Information -->
+              <h2
+                class="text-center !text-[26px] md:!text-[32px] lg:!text-[40px] !leading-[34px] md:!leading-[38px] lg:!leading-[48px] !font-bold"
+              >
+                Personal information
+              </h2>
+
+              <!-- Full Legal Name -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-2"
+                >
+                  Full Legal Name:
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type an answer..."
+                  class="w-full bg-[rgba(255,255,255,0.12)] text-[16px] font-normal px-4 py-[23.5px] placeholder-light-950 placeholder:text-[16px] placeholder:font-normal focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-offset-0 transition-all"
+                />
+              </div>
+
+              <!-- Email Address -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-2"
+                >
+                  Email Address:
+                </label>
+                <input
+                  type="email"
+                  placeholder="Type an answer..."
+                  class="w-full bg-[rgba(255,255,255,0.12)] text-[16px] font-normal px-4 py-[23.5px] placeholder-light-950 placeholder:text-[16px] placeholder:font-normal focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-offset-0 transition-all"
+                />
+              </div>
+
+              <!-- Organization Name -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-2"
+                >
+                  Organization Name (if applicable):
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type an answer..."
+                  class="w-full bg-[rgba(255,255,255,0.12)] text-[16px] font-normal px-4 py-[23.5px] placeholder-light-950 placeholder:text-[16px] placeholder:font-normal focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-offset-0 transition-all"
+                />
+              </div>
+
+              <!-- LinkedIn -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-2"
+                >
+                  LinkedIn (if any)
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type an answer..."
+                  class="w-full bg-[rgba(255,255,255,0.12)] text-[16px] font-normal px-4 py-[23.5px] placeholder-light-950 placeholder:text-[16px] placeholder:font-normal focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-offset-0 transition-all"
+                />
+              </div>
+
+              <!-- Investor Type: Select Dropdown -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-2"
+                >
+                  Investor Type:
+                </label>
+                <!-- ✅ Fixed here -->
+                <div class="relative">
+                  <select
+                    class="w-full bg-[rgba(255,255,255,0.12)] text-[16px] font-normal px-4 py-[23.5px] text-white focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-offset-0 transition-all appearance-none cursor-pointer"
+                  >
+                    <option
+                      value=""
+                      disabled
+                      selected
+                      class="bg-[#1c1775] text-white"
+                    >
+                      Type an answer...
+                    </option>
+                    <option value="angel" class="bg-[#1c1775] text-white">
+                      Angel Investor
+                    </option>
+                    <option value="vc" class="bg-[#1c1775] text-white">
+                      Venture Capitalist
+                    </option>
+                    <option
+                      value="institutional"
+                      class="bg-[#1c1775] text-white"
+                    >
+                      Institutional Investor
+                    </option>
+                    <option value="other" class="bg-[#1c1775] text-white">
+                      Other
+                    </option>
+                  </select>
+                  <!-- Custom Dropdown Chevron Icon -->
+                  <div
+                    class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-white"
+                  >
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                      <path
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Verification: Select Dropdown -->
+              <div>
+                <label
+                  class="block text-[16px] md:text-[20px] font-normal mb-2"
+                >
+                  Verification: 1 + 10 = ?
+                </label>
+                <div class="relative">
+                  <select
+                    class="w-full bg-[rgba(255,255,255,0.12)] text-[16px] font-normal px-4 py-[23.5px] text-white focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-offset-0 transition-all appearance-none cursor-pointer"
+                  >
+                    <option
+                      value=""
+                      disabled
+                      selected
+                      class="bg-[#1c1775] text-white"
+                    >
+                      Type an answer...
+                    </option>
+                    <option value="11" class="bg-[#1c1775] text-white">
+                      11
+                    </option>
+                    <option value="10" class="bg-[#1c1775] text-white">
+                      10
+                    </option>
+                    <option value="12" class="bg-[#1c1775] text-white">
+                      12
+                    </option>
+                  </select>
+                  <!-- Custom Dropdown Chevron Icon -->
+                  <div
+                    class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-white"
+                  >
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                      <path
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-6">
+                <!-- Disclaimer Text -->
+                <p
+                  class="text-[16px] md:text-[20px] font-normal leading-normal max-w-[810px]"
+                >
+                  Please be aware that as part of our due diligence process, we
+                  may request to verify references regarding your prior
+                  investment activities.
+                </p>
+
+                <!-- Terms Note with Custom SVG Checkbox -->
+                <label
+                  class="flex items-center gap-3 cursor-pointer select-none group"
+                >
+                  <!-- Hidden Native Checkbox -->
+                  <input type="checkbox" class="sr-only peer" />
+
+                  <!-- Custom Unchecked SVG Icon -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    class="shrink-0 peer-checked:hidden text-white opacity-80 group-hover:opacity-100 transition-opacity"
+                  >
+                    <path
+                      d="M16 18C16.55 18 17.0208 17.8042 17.4125 17.4125C17.8042 17.0208 18 16.55 18 16V2C18 1.45 17.8042 0.979167 17.4125 0.5875C17.0208 0.195833 16.55 0 16 0H2C1.45 0 0.979166 0.195833 0.5875 0.5875C0.195833 0.979167 0 1.45 0 2V16C0 16.55 0.195833 17.0208 0.5875 17.4125C0.979166 17.8042 1.45 18 2 18H16ZM16 16H2V2H16V16Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+
+                  <!-- Custom Checked SVG Icon -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    class="shrink-0 hidden peer-checked:block text-white"
+                  >
+                    <path
+                      d="M16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM7 14L2 9L3.41 7.59L7 11.17L14.59 3.58L16 5L7 14Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+
+                  <p
+                    class="text-[16px] md:text-[20px] font-normal leading-normal"
+                  >
+                    By submitting this form, you agree to our
+                    <a
+                      href="#"
+                      class="underline hover:text-white transition-colors"
+                      >Terms & Conditions</a
+                    >
+                    regarding your data.
+                  </p>
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="flex justify-end pt-4">
+                <button
+                  type="submit"
+                  class="btn btn-overlay-primary shadow-custom-black"
+                >
+                  Submit Form
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= DOWNLOAD APP ================= -->
+    <section class="py-[60px] lg:py-[94px] bg-[#EFEFFA]">
+      <div class="container">
+        <div class="divider divider-blue mb-10 lg:mb-[80px]"></div>
+
+        <h2 class="text-primary-800">Download our app now for free</h2>
+
+        <div class="grid gap-4 md:gap-6 xl:-8 lg:grid-cols-2">
+          <!-- iOS card -->
+          <div
+            class="flex flex-col gap-10 rounded-[24px] py-5 px-6 text-light-900 card-overlay-primary shadow-custom-black"
+          >
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col gap-2 w-full max-w-[382px]">
+                <h3
+                  class="text-[22px] lg:text-[32px] leading-[28px] lg:leading-[38px] font-bold"
+                >
+                  IOS App Download
+                </h3>
+                <p class="text-sm leading-5 font-bold">
+                  Scan the QR code or use the button below to download our iOS
+                  app.
+                </p>
+              </div>
+              <img
+                src="./assets/images/home/apple.png"
+                alt=""
+                width="81"
+                height="100"
+              />
+            </div>
+
+            <div class="flex justify-center">
+              <img
+                src="./assets/images/home/white-qr.svg"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </div>
+
+            <a
+              href="#"
+              class="btn btn-primary btn-overlay-primary shadow-custom-black"
+              >Download</a
+            >
+          </div>
+
+          <!-- Android card -->
+          <div
+            class="flex flex-col gap-10 rounded-[24px] py-5 px-6 text-primary-900 bg-[rgba(255,255,255,0.06)] border border-solid border-[rgba(0,0,0,0.10)] relative z-[1] overflow-hidden"
+          >
+             <div
+              class="absolute z-[-1] bottom-[-670px] right-[-255px] rotate-[-128.459deg] rounded-[755px] blur-[100.0378189086914px] bg-[linear-gradient(152deg,#FFF_62.37%,#1909D9_82.7%)] w-[746px] h-[755px]"
+            ></div>
+            <div
+              class="absolute z-[-2] rotate-[-128.459deg] bottom-[-750px] left-[-420px] rounded-[755px] blur-[100.0378189086914px] bg-[linear-gradient(152deg,#FFF_62.37%,#1909D9_82.7%)] w-[746px] h-[755px]"
+            ></div>
+
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col gap-2 w-full max-w-[382px]">
+                <h3
+                  class="text-[22px] lg:text-[32px] leading-[28px] lg:leading-[38px] font-normal"
+                >
+                  Android App Download
+                </h3>
+                <p class="text-sm leading-5 font-bold">
+                  Scan the QR code or use the button below to download our
+                  Android app..
+                </p>
+              </div>
+              <img
+                src="./assets/images/home/anroid.png"
+                alt=""
+                width="81"
+                height="100"
+              />
+            </div>
+
+            <div class="flex justify-center">
+              <img
+                src="./assets/images/home/blue-qr.svg"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </div>
+
+            <a href="#" class="btn btn-overlay shadow-custom-black">Download</a>
+          </div>
+        </div>
+
+        <div class="divider divider-blue divider-up mt-10 lg:mt-[80px]"></div>
+      </div>
+    </section>
+
+    <footer
+      class="py-[50px] bg-[url('./assets/images/home/footer-bg.png')] bg-no-repeat bg-cover text-light-950"
+    >
+      <div class="container">
+        <div class="divider"></div>
+
+        <!-- Main Footer Content -->
+        <div class="py-12 lg:py-16">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-9">
+            <!-- Left Column: Branding & Description -->
+            <div class="lg:col-span-full flex flex-col justify-between">
+              <div>
+                <!-- Brand Icon / Logo -->
+                <a href="/" class="inline-block">
+                  <div
+                    class="w-10 h-10 rounded-full bg-light-1950 border border-white/20 flex items-center justify-center"
+                  >
+                    <img
+                      src="./assets/images/logos/quick-news.svg"
+                      alt="Quick News Global"
+                      class="w-6 h-6"
+                    />
+                  </div>
+                </a>
+
+                <!-- Heading -->
+                <h2 class="!mb-6">Quick News Global</h2>
+
+                <!-- Paragraph -->
+                <p class="text-base leading-[20px] max-w-[445px]">
+                  Quick News Global's (AI) tells you everything you actually
+                  need to know including how the story is being framed. Global
+                  events, local stories, and everything in between, delivered in
+                  45 words. Know the headline, but also know the feeling behind
+                  it.
+                  <a
+                    href="#"
+                    class="underline text-white hover:text-primary-400 transition-colors"
+                    >Download now</a
+                  >
+                  to stay informed and united.
+                </p>
+              </div>
+            </div>
+
+            <!-- Middle Column: Navigation Columns (Menu, Social, Legal) -->
+            <div
+              class="lg:col-span-7 xlg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-[90px] w-full max-w-[752px]"
+            >
+              <!-- Menu Links -->
+              <div>
+                <h4
+                  class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6"
+                >
+                  Menu Links
+                </h4>
+                <ul class="space-y-3 text-base leading-[20px]">
+                  <li>
+                    <a href="./" class="hover:text-white transition-colors"
+                      >Home</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/about-us.html" class="hover:text-white transition-colors"
+                      >Our Vision</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/partnership.html" class="hover:text-white transition-colors"
+                      >Partnerships</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/invest.html" class="hover:text-white transition-colors"
+                      >Invest</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/donate-now.html" class="hover:text-white transition-colors"
+                      >Donate</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition-colors"
+                      >Our Team</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition-colors"
+                      >Blogs</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Social Links -->
+              <div>
+                <h4
+                  class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6"
+                >
+                  Social Links
+                </h4>
+                <div
+                  class="flex flex-wrap md:grid md:grid-cols-4 gap-4 md:gap-x-[17px] md:gap-y-[19px]"
+                >
+                  <a href="#" aria-label="Facebook">
+                    <img src="./assets/images/icons/facebook.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="Instagram">
+                    <img src="./assets/images/icons/instagram.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="Twitter">
+                    <img src="./assets/images/icons/twitter.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="TikTok">
+                    <img src="./assets/images/icons/tik-tok.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="Truth">
+                    <img src="./assets/images/icons/truth.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="LinkedIn">
+                    <img src="./assets/images/icons/linkdin.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="YouTube">
+                    <img src="./assets/images/icons/youtube.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+
+              <!-- Legal -->
+              <div>
+                <h4
+                  class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6"
+                >
+                  Legal
+                </h4>
+                <ul class="space-y-3 text-base leading-[20px]">
+                  <li>
+                    <a href="#" class="hover:text-white transition-colors"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition-colors"
+                      >Terms of Service</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition-colors"
+                      >Editorial Guidelines</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Column: App Download Cards -->
+            <div
+              class="lg:col-span-5 xlg:col-span-4 flex flex-col space-y-4 justify-start text-primary-950 max-w-[412px]"
+            >
+              <!-- iOS App Card -->
+              <div
+                class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all"
+              >
+                <div class="flex flex-col gap-[15px]">
+                  <div class="shrink-0">
+                    <img src="./assets/images/icons/footer-apple.svg" alt="" />
+                  </div>
+
+                  <div class="flex flex-col gap-[3px]">
+                    <h5 class="text-base font-bold">
+                      Download our app now for free
+                    </h5>
+                    <p class="text-[12px] leading-tight">
+                      Scan the QR code or use the button below to download our
+                      iOS app.
+                    </p>
+                  </div>
+                </div>
+                <!-- Dummy QR Code -->
+                <div
+                  class="w-[93px] h-[93px] shrink-0 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/images/icons/footer-apple-qr.svg"
+                    alt="iOS QR Code"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+
+              <!-- Android App Card -->
+              <div
+                class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all"
+              >
+                <div class="flex flex-col gap-[15px]">
+                  <div class="shrink-0">
+                    <img src="./assets/images/icons/footer-anroid.svg" alt="" />
+                  </div>
+
+                  <div class="flex flex-col gap-[3px]">
+                    <h5 class="text-base font-bold">
+                      Download our app now for free
+                    </h5>
+                    <p class="text-[12px] leading-tight">
+                      Scan the QR code or use the button below to download our
+                      Android app.
+                    </p>
+                  </div>
+                </div>
+                <!-- Dummy QR Code -->
+                <div
+                  class="w-[93px] h-[93px] shrink-0 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/images/icons/footer-anroid-qr.svg"
+                    alt="Anroid QR Code"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider divider-up"></div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

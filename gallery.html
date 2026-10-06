@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick News Global</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="font-body text-white antialiased">
+    <div
+      class="relative overflow-hidden bg-[url('./assets/images/about-us/hero-banner-bg.png')] bg-no-repeat bg-cover"
+      style="background-position: top left"
+    >
+      <!-- ================= NAVBAR ================= -->
+      <header class="pt-4 md:pt-6 lg:pt-10 relative z-50">
+        <div class="container mx-auto px-4">
+          <nav
+            class="flex items-center justify-between gap-[24px] xl:gap-[40px] rounded-[24px] border border-solid border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.06)] px-6 py-[19px] backdrop-blur-[24.7px] relative"
+          >
+            <!-- Logo -->
+            <a href="./" class="shrink-0">
+              <img
+                src="./assets/images/logos/quick-news.svg"
+                alt="Quick News"
+              />
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <div class="flex-1 hidden lg:flex items-center justify-between">
+              <ul class="flex items-center gap-5 xl:gap-10 font-bold text-sm">
+                <li>
+                  <a
+                    href="./"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/quick-verify.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Verify AI</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about-us.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Our Vision</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/partnership.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Partnership</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/invest.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Invest</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/donate-now.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Donate</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Our Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+
+              <a
+                href="#"
+                class="btn btn-secondary shadow-custom-glow !px-6 xl:!px-10 flex items-center gap-2 btn-overlay"
+              >
+                Download the App
+                <img
+                  src="./assets/images/icons/light-blue-arrow-right.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+              </a>
+            </div>
+
+            <!-- Hamburger Toggle Button (Visible on Mobile/Tablet < lg) -->
+            <button
+              type="button"
+              id="menu-toggle-btn"
+              aria-label="Toggle navigation"
+              class="lg:hidden p-2 rounded-xl bg-white/10 text-white hover:bg-white/20 focus:outline-none transition-all"
+            >
+              <!-- Hamburger Icon (Default) -->
+              <svg
+                id="hamburger-icon"
+                class="w-6 h-6 stroke-current"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+
+              <!-- Close Cross Icon (Hidden by default) -->
+              <svg
+                id="close-icon"
+                class="w-6 h-6 stroke-current hidden"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <!-- Mobile Dropdown Menu Drawer -->
+            <div
+              id="mobile-menu"
+              class="hidden absolute top-[calc(100%+12px)] left-0 right-0 w-full rounded-[24px] border border-white/20 bg-[#1c1775]/95 backdrop-blur-2xl p-6 shadow-2xl flex-col gap-5 lg:hidden z-50 transition-all duration-300"
+            >
+              <ul class="flex flex-col gap-3 font-bold text-base text-white">
+                <li>
+                  <a
+                    href="./"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/quick-verify.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Verify AI</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about-us.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Our Vision</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/partnership.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Partnership</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/invest.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Invest</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/donate-now.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Donate</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Our Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+
+              <hr class="border-white/15 my-1" />
+
+              <a
+                href="#"
+                class="btn btn-secondary shadow-custom-glow btn-overlay w-full justify-center !py-3 flex items-center gap-2"
+              >
+                Download the App
+                <img
+                  src="./assets/images/icons/light-blue-arrow-right.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- ================= HERO ================= -->
+      <section class="hero-banner py-[60px] lg:pb-[137px] relative">
+        <div class="container">
+          <div
+            class="flex flex-col gap-4 lg:gap-8 items-center text-center text-light-950"
+          >
+            <img
+              src="./assets/images/gallery/gallery-banner-logo.svg"
+              alt="Quick News"
+              width="112"
+              height="112"
+              class="mx-auto block"
+            />
+
+            <div class="flex flex-col items-center gap-4">
+              <h1
+                class="!text-[25px] !leading-[52px] tracking-[-1px] w-full max-w-[682px]"
+              >
+                The secret to staying Globally aware without losing your time?
+                It starts with Quick News Global (AI)
+              </h1>
+
+              <p
+                class="text-base lg:text-[20px] leading-[20px] lg:leading-[30px] w-full max-w-[962px]"
+              >
+                The world does not need more news. It needs smarter news. Quick
+                News Global (AI) cuts through the noise, delivers instant
+                intelligence on every headline and gives you back the time you
+                deserve. Stop scrolling. Start understanding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="py-[60px] lg:py-[94px]">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="divider divider-blue mb-10 lg:mb-[60px]"></div>
+        <h2
+          class="text-primary-800 mb-8 lg:mb-12 font-bold text-3xl lg:text-4xl"
+        >
+          Hot Global Topics
+        </h2>
+
+        <div class="flex flex-col gap-10 lg:gap-[88px]">
+          <!-- Cards Gallery Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-x-6 lg:gap-y-10"
+          >
+            <!-- Card 1 -->
+            <div
+              class="card-item bg-white rounded-[32px] overflow-hidden shadow-[-3px_-4px_7px_0_rgba(255,255,255,0.15)_inset,4px_38px_62px_0_rgba(0,0,0,0.10)] transition duration-300 flex flex-col h-full"
+            >
+              <div class="w-full h-[231px] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop"
+                  alt="Strategy is Mastery"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-4 flex flex-col gap-6 justify-between flex-grow">
+                <div class="flex flex-col gap-6">
+                  <h3
+                    class="text-[24px] font-semibold text-black leading-[32px]"
+                  >
+                    The moment you start apologizing for your background is the
+                    moment you hand over your advantage.
+                  </h3>
+                  <p class="text-[14px] leading-[20px] text-[#475467]">
+                    Scott Newton (Managing Partner at Thinking Dimensions
+                    Global)
+                  </p>
+                </div>
+
+                <span class="text-[14px] leading-[20px] text-[#475467]"
+                  >08 Jul 2026</span
+                >
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="card-item bg-white rounded-[32px] overflow-hidden shadow-[-3px_-4px_7px_0_rgba(255,255,255,0.15)_inset,4px_38px_62px_0_rgba(0,0,0,0.10)] transition duration-300 flex flex-col h-full"
+            >
+              <div class="w-full h-[231px] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop"
+                  alt="Strategy is Mastery"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-4 flex flex-col gap-6 justify-between flex-grow">
+                <div class="flex flex-col gap-6">
+                  <h3
+                    class="text-[24px] font-semibold text-black leading-[32px]"
+                  >
+                    The moment you start apologizing for your background is the
+                    moment you hand over your advantage.
+                  </h3>
+                  <p class="text-[14px] leading-[20px] text-[#475467]">
+                    Scott Newton (Managing Partner at Thinking Dimensions
+                    Global)
+                  </p>
+                </div>
+
+                <span class="text-[14px] leading-[20px] text-[#475467]"
+                  >08 Jul 2026</span
+                >
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="card-item bg-white rounded-[32px] overflow-hidden shadow-[-3px_-4px_7px_0_rgba(255,255,255,0.15)_inset,4px_38px_62px_0_rgba(0,0,0,0.10)] transition duration-300 flex flex-col h-full"
+            >
+              <div class="w-full h-[231px] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop"
+                  alt="Strategy is Mastery"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-4 flex flex-col gap-6 justify-between flex-grow">
+                <div class="flex flex-col gap-6">
+                  <h3
+                    class="text-[24px] font-semibold text-black leading-[32px]"
+                  >
+                    The moment you start apologizing for your background is the
+                    moment you hand over your advantage.
+                  </h3>
+                  <p class="text-[14px] leading-[20px] text-[#475467]">
+                    Scott Newton (Managing Partner at Thinking Dimensions
+                    Global)
+                  </p>
+                </div>
+
+                <span class="text-[14px] leading-[20px] text-[#475467]"
+                  >08 Jul 2026</span
+                >
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="card-item bg-white rounded-[32px] overflow-hidden shadow-[-3px_-4px_7px_0_rgba(255,255,255,0.15)_inset,4px_38px_62px_0_rgba(0,0,0,0.10)] transition duration-300 flex flex-col h-full"
+            >
+              <div class="w-full h-[231px] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop"
+                  alt="Strategy is Mastery"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-4 flex flex-col gap-6 justify-between flex-grow">
+                <div class="flex flex-col gap-6">
+                  <h3
+                    class="text-[24px] font-semibold text-black leading-[32px]"
+                  >
+                    The moment you start apologizing for your background is the
+                    moment you hand over your advantage.
+                  </h3>
+                  <p class="text-[14px] leading-[20px] text-[#475467]">
+                    Scott Newton (Managing Partner at Thinking Dimensions
+                    Global)
+                  </p>
+                </div>
+
+                <span class="text-[14px] leading-[20px] text-[#475467]"
+                  >08 Jul 2026</span
+                >
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div
+              class="card-item bg-white rounded-[32px] overflow-hidden shadow-[-3px_-4px_7px_0_rgba(255,255,255,0.15)_inset,4px_38px_62px_0_rgba(0,0,0,0.10)] transition duration-300 flex flex-col h-full"
+            >
+              <div class="w-full h-[231px] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop"
+                  alt="Strategy is Mastery"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-4 flex flex-col gap-6 justify-between flex-grow">
+                <div class="flex flex-col gap-6">
+                  <h3
+                    class="text-[24px] font-semibold text-black leading-[32px]"
+                  >
+                    The moment you start apologizing for your background is the
+                    moment you hand over your advantage.
+                  </h3>
+                  <p class="text-[14px] leading-[20px] text-[#475467]">
+                    Scott Newton (Managing Partner at Thinking Dimensions
+                    Global)
+                  </p>
+                </div>
+
+                <span class="text-[14px] leading-[20px] text-[#475467]"
+                  >08 Jul 2026</span
+                >
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div
+              class="card-item bg-white rounded-[32px] overflow-hidden shadow-[-3px_-4px_7px_0_rgba(255,255,255,0.15)_inset,4px_38px_62px_0_rgba(0,0,0,0.10)] transition duration-300 flex flex-col h-full"
+            >
+              <div class="w-full h-[231px] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop"
+                  alt="Strategy is Mastery"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-4 flex flex-col gap-6 justify-between flex-grow">
+                <div class="flex flex-col gap-6">
+                  <h3
+                    class="text-[24px] font-semibold text-black leading-[32px]"
+                  >
+                    The moment you start apologizing for your background is the
+                    moment you hand over your advantage.
+                  </h3>
+                  <p class="text-[14px] leading-[20px] text-[#475467]">
+                    Scott Newton (Managing Partner at Thinking Dimensions
+                    Global)
+                  </p>
+                </div>
+
+                <span class="text-[14px] leading-[20px] text-[#475467]"
+                  >08 Jul 2026</span
+                >
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div
+              class="card-item bg-white rounded-[32px] overflow-hidden shadow-[-3px_-4px_7px_0_rgba(255,255,255,0.15)_inset,4px_38px_62px_0_rgba(0,0,0,0.10)] transition duration-300 flex flex-col h-full"
+            >
+              <div class="w-full h-[231px] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop"
+                  alt="Strategy is Mastery"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-4 flex flex-col gap-6 justify-between flex-grow">
+                <div class="flex flex-col gap-6">
+                  <h3
+                    class="text-[24px] font-semibold text-black leading-[32px]"
+                  >
+                    The moment you start apologizing for your background is the
+                    moment you hand over your advantage.
+                  </h3>
+                  <p class="text-[14px] leading-[20px] text-[#475467]">
+                    Scott Newton (Managing Partner at Thinking Dimensions
+                    Global)
+                  </p>
+                </div>
+
+                <span class="text-[14px] leading-[20px] text-[#475467]"
+                  >08 Jul 2026</span
+                >
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div
+              class="card-item bg-white rounded-[32px] overflow-hidden shadow-[-3px_-4px_7px_0_rgba(255,255,255,0.15)_inset,4px_38px_62px_0_rgba(0,0,0,0.10)] transition duration-300 flex flex-col h-full"
+            >
+              <div class="w-full h-[231px] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop"
+                  alt="Strategy is Mastery"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-4 flex flex-col gap-6 justify-between flex-grow">
+                <div class="flex flex-col gap-6">
+                  <h3
+                    class="text-[24px] font-semibold text-black leading-[32px]"
+                  >
+                    The moment you start apologizing for your background is the
+                    moment you hand over your advantage.
+                  </h3>
+                  <p class="text-[14px] leading-[20px] text-[#475467]">
+                    Scott Newton (Managing Partner at Thinking Dimensions
+                    Global)
+                  </p>
+                </div>
+
+                <span class="text-[14px] leading-[20px] text-[#475467]"
+                  >08 Jul 2026</span
+                >
+              </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div
+              class="card-item bg-white rounded-[32px] overflow-hidden shadow-[-3px_-4px_7px_0_rgba(255,255,255,0.15)_inset,4px_38px_62px_0_rgba(0,0,0,0.10)] transition duration-300 flex flex-col h-full"
+            >
+              <div class="w-full h-[231px] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop"
+                  alt="Strategy is Mastery"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-4 flex flex-col gap-6 justify-between flex-grow">
+                <div class="flex flex-col gap-6">
+                  <h3
+                    class="text-[24px] font-semibold text-black leading-[32px]"
+                  >
+                    The moment you start apologizing for your background is the
+                    moment you hand over your advantage.
+                  </h3>
+                  <p class="text-[14px] leading-[20px] text-[#475467]">
+                    Scott Newton (Managing Partner at Thinking Dimensions
+                    Global)
+                  </p>
+                </div>
+
+                <span class="text-[14px] leading-[20px] text-[#475467]"
+                  >08 Jul 2026</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-end">
+            <nav
+              class="inline-flex pagination"
+            >
+              <!-- Previous Button -->
+              <a href="#" class="disabled previous"> Previous </a>
+
+              <!-- Active Page (1) with Glossy Blue Gradient -->
+              <a href="#" class="active"> 1 </a>
+
+              <!-- Page 2 -->
+              <a href="#" class=""> 2 </a>
+
+              <!-- Page 3 -->
+              <a href="#" class=""> 3 </a>
+
+              <!-- Page 4 -->
+              <a href="#" class=""> 4 </a>
+
+              <!-- Page 5 -->
+              <a href="#" class=""> 5 </a>
+
+              <!-- Next Button -->
+              <a
+                href="#"
+                class="next"
+              >
+                Next
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="divider divider-blue divider-up mt-10 lg:mt-[60px]"></div>
+      </div>
+    </section>
+
+    <!-- ================= DOWNLOAD APP ================= -->
+    <section class="py-[60px] lg:py-[94px] bg-[#EFEFFA]">
+      <div class="container">
+        <div class="divider divider-blue mb-10 lg:mb-[80px]"></div>
+
+        <h2 class="text-primary-800">Download our app now for free</h2>
+
+        <div class="grid gap-4 md:gap-6 xl:-8 lg:grid-cols-2">
+          <!-- iOS card -->
+          <div
+            class="flex flex-col gap-10 rounded-[24px] py-5 px-6 text-light-900 card-overlay-primary shadow-custom-black"
+          >
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col gap-2 w-full max-w-[382px]">
+                <h3
+                  class="text-[22px] lg:text-[32px] leading-[28px] lg:leading-[38px] font-bold"
+                >
+                  IOS App Download
+                </h3>
+                <p class="text-sm leading-5 font-bold">
+                  Scan the QR code or use the button below to download our iOS
+                  app.
+                </p>
+              </div>
+              <img
+                src="./assets/images/home/apple.png"
+                alt=""
+                width="81"
+                height="100"
+              />
+            </div>
+
+            <div class="flex justify-center">
+              <img
+                src="./assets/images/home/white-qr.svg"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </div>
+
+            <a
+              href="#"
+              class="btn btn-primary btn-overlay-primary shadow-custom-black"
+              >Download</a
+            >
+          </div>
+
+          <!-- Android card -->
+          <div
+            class="flex flex-col gap-10 rounded-[24px] py-5 px-6 text-primary-900 bg-[rgba(255,255,255,0.06)] border border-solid border-[rgba(0,0,0,0.10)] relative z-[1] overflow-hidden"
+          >
+             <div
+              class="absolute z-[-1] bottom-[-670px] right-[-255px] rotate-[-128.459deg] rounded-[755px] blur-[100.0378189086914px] bg-[linear-gradient(152deg,#FFF_62.37%,#1909D9_82.7%)] w-[746px] h-[755px]"
+            ></div>
+            <div
+              class="absolute z-[-2] rotate-[-128.459deg] bottom-[-750px] left-[-420px] rounded-[755px] blur-[100.0378189086914px] bg-[linear-gradient(152deg,#FFF_62.37%,#1909D9_82.7%)] w-[746px] h-[755px]"
+            ></div>
+
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col gap-2 w-full max-w-[382px]">
+                <h3
+                  class="text-[22px] lg:text-[32px] leading-[28px] lg:leading-[38px] font-normal"
+                >
+                  Android App Download
+                </h3>
+                <p class="text-sm leading-5 font-bold">
+                  Scan the QR code or use the button below to download our
+                  Android app..
+                </p>
+              </div>
+              <img
+                src="./assets/images/home/anroid.png"
+                alt=""
+                width="81"
+                height="100"
+              />
+            </div>
+
+            <div class="flex justify-center">
+              <img
+                src="./assets/images/home/blue-qr.svg"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </div>
+
+            <a href="#" class="btn btn-overlay shadow-custom-black">Download</a>
+          </div>
+        </div>
+
+        <div class="divider divider-blue divider-up mt-10 lg:mt-[80px]"></div>
+      </div>
+    </section>
+
+    <footer
+      class="py-[50px] bg-[url('./assets/images/home/footer-bg.png')] bg-no-repeat bg-cover text-light-950"
+    >
+      <div class="container">
+        <div class="divider"></div>
+
+        <!-- Main Footer Content -->
+        <div class="py-12 lg:py-16">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-9">
+            <!-- Left Column: Branding & Description -->
+            <div class="lg:col-span-full flex flex-col justify-between">
+              <div>
+                <!-- Brand Icon / Logo -->
+                <a href="/" class="inline-block">
+                  <div
+                    class="w-10 h-10 rounded-full bg-light-1950 border border-white/20 flex items-center justify-center"
+                  >
+                    <img
+                      src="./assets/images/logos/quick-news.svg"
+                      alt="Quick News Global"
+                      class="w-6 h-6"
+                    />
+                  </div>
+                </a>
+
+                <!-- Heading -->
+                <h2 class="!mb-6">Quick News Global</h2>
+
+                <!-- Paragraph -->
+                <p class="text-base leading-[20px] max-w-[445px]">
+                  Quick News Global's (AI) tells you everything you actually
+                  need to know including how the story is being framed. Global
+                  events, local stories, and everything in between, delivered in
+                  45 words. Know the headline, but also know the feeling behind
+                  it.
+                  <a
+                    href="#"
+                    class="underline text-white hover:text-primary-400 transition-colors"
+                    >Download now</a
+                  >
+                  to stay informed and united.
+                </p>
+              </div>
+            </div>
+
+            <!-- Middle Column: Navigation Columns (Menu, Social, Legal) -->
+            <div
+              class="lg:col-span-7 xlg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-[90px] w-full max-w-[752px]"
+            >
+              <!-- Menu Links -->
+              <div>
+                <h4
+                  class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6"
+                >
+                  Menu Links
+                </h4>
+                <ul class="space-y-3 text-base leading-[20px]">
+                  <li>
+                    <a href="./" class="hover:text-white transition-colors"
+                      >Home</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/about-us.html" class="hover:text-white transition-colors"
+                      >Our Vision</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/partnership.html" class="hover:text-white transition-colors"
+                      >Partnerships</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/invest.html" class="hover:text-white transition-colors"
+                      >Invest</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/donate-now.html" class="hover:text-white transition-colors"
+                      >Donate</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition-colors"
+                      >Our Team</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition-colors"
+                      >Blogs</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Social Links -->
+              <div>
+                <h4
+                  class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6"
+                >
+                  Social Links
+                </h4>
+                <div
+                  class="flex flex-wrap md:grid md:grid-cols-4 gap-4 md:gap-x-[17px] md:gap-y-[19px]"
+                >
+                  <a href="#" aria-label="Facebook">
+                    <img src="./assets/images/icons/facebook.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="Instagram">
+                    <img src="./assets/images/icons/instagram.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="Twitter">
+                    <img src="./assets/images/icons/twitter.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="TikTok">
+                    <img src="./assets/images/icons/tik-tok.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="Truth">
+                    <img src="./assets/images/icons/truth.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="LinkedIn">
+                    <img src="./assets/images/icons/linkdin.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="YouTube">
+                    <img src="./assets/images/icons/youtube.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+
+              <!-- Legal -->
+              <div>
+                <h4
+                  class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6"
+                >
+                  Legal
+                </h4>
+                <ul class="space-y-3 text-base leading-[20px]">
+                  <li>
+                    <a href="#" class="hover:text-white transition-colors"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition-colors"
+                      >Terms of Service</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition-colors"
+                      >Editorial Guidelines</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Column: App Download Cards -->
+            <div
+              class="lg:col-span-5 xlg:col-span-4 flex flex-col space-y-4 justify-start text-primary-950 max-w-[412px]"
+            >
+              <!-- iOS App Card -->
+              <div
+                class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all"
+              >
+                <div class="flex flex-col gap-[15px]">
+                  <div class="shrink-0">
+                    <img src="./assets/images/icons/footer-apple.svg" alt="" />
+                  </div>
+
+                  <div class="flex flex-col gap-[3px]">
+                    <h5 class="text-base font-bold">
+                      Download our app now for free
+                    </h5>
+                    <p class="text-[12px] leading-tight">
+                      Scan the QR code or use the button below to download our
+                      iOS app.
+                    </p>
+                  </div>
+                </div>
+                <!-- Dummy QR Code -->
+                <div
+                  class="w-[93px] h-[93px] shrink-0 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/images/icons/footer-apple-qr.svg"
+                    alt="iOS QR Code"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+
+              <!-- Android App Card -->
+              <div
+                class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all"
+              >
+                <div class="flex flex-col gap-[15px]">
+                  <div class="shrink-0">
+                    <img src="./assets/images/icons/footer-anroid.svg" alt="" />
+                  </div>
+
+                  <div class="flex flex-col gap-[3px]">
+                    <h5 class="text-base font-bold">
+                      Download our app now for free
+                    </h5>
+                    <p class="text-[12px] leading-tight">
+                      Scan the QR code or use the button below to download our
+                      Android app.
+                    </p>
+                  </div>
+                </div>
+                <!-- Dummy QR Code -->
+                <div
+                  class="w-[93px] h-[93px] shrink-0 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/images/icons/footer-anroid-qr.svg"
+                    alt="Anroid QR Code"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider divider-up"></div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
