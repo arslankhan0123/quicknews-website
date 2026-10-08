@@ -24,14 +24,47 @@ $(document).ready(function () {
     },
   });
 
-  // Custom Navigation Click Events
-  $("#owl-next-btn").click(function () {
-    owl.trigger("next.owl.carousel");
-  });
-
-  $("#owl-prev-btn").click(function () {
-    owl.trigger("prev.owl.carousel");
-  });
+  // ==========================================
+  // Team Carousel Initialization
+  // ==========================================
+  const teamOwl = $(".team-carousel");
+  if (teamOwl.length) {
+    teamOwl.owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: false,
+      dots: true,
+      dotsEach: 2, // Exactly 3 dots across 6 items
+      autoplay: true,
+      autoplayTimeout: 1800, // Faster swapping without long delay
+      autoplaySpeed: 700,
+      smartSpeed: 600,
+      slideBy: 1,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1.15,
+          margin: 14,
+          dotsEach: 2,
+        },
+        640: {
+          items: 2.15,
+          margin: 18,
+          dotsEach: 2,
+        },
+        1024: {
+          items: 3,
+          margin: 24,
+          dotsEach: 2,
+        },
+        1280: {
+          items: 3,
+          margin: 28,
+          dotsEach: 2,
+        },
+      },
+    });
+  }
 
   // ==========================================
   // 2. Header Mobile Menu Toggle Logic
@@ -76,13 +109,29 @@ $(document).ready(function () {
 
   const $verifyInput = $("#verify");
   const $quickAIDropdown = $(".quick-ai-dropdown");
+  const $userQueryPill = $("#user-query-pill");
 
-  $verifyInput.on("input", function () {
-    // Check if typed character length is greater than 2
-    if ($(this).val().trim().length > 2) {
-      $quickAIDropdown.show(); // or .removeClass('hidden')
-    } else {
-      $quickAIDropdown.hide(); // or .addClass('hidden')
+  function triggerVerification() {
+    const query = $verifyInput.val().trim();
+    if (query.length > 0 && $userQueryPill.length) {
+      $userQueryPill.text(query);
+    } else if ($userQueryPill.length) {
+      $userQueryPill.text("trump died?");
+    }
+    $quickAIDropdown.removeClass("hidden").show();
+  }
+
+  // Show dropdown when Verify button is clicked
+  $(".form button").on("click", function (e) {
+    e.preventDefault();
+    triggerVerification();
+  });
+
+  // Also trigger on Enter key in input
+  $verifyInput.on("keydown", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      triggerVerification();
     }
   });
 });

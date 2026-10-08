@@ -1,0 +1,1134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Quick News Global</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .topic-card-box {
+        display: flex;
+        width: 100%;
+        max-width: 412px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 32px;
+        background: #FFF;
+        box-shadow: -3px -4px 7px 0 rgba(255, 255, 255, 0.15) inset, 4px 38px 62px 0 rgba(0, 0, 0, 0.10);
+        padding: 16px 16px 24px 16px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .topic-card-box:hover {
+        transform: translateY(-6px);
+        box-shadow: -3px -4px 7px 0 rgba(255, 255, 255, 0.25) inset, 4px 44px 70px 0 rgba(0, 0, 0, 0.15);
+      }
+      .topic-card-title {
+        color: #101828;
+        font-family: 'Raleway', sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+      }
+      .topic-card-subtitle {
+        color: #667085;
+        font-family: 'Raleway', sans-serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+      }
+      .topic-card-date {
+        color: #667085;
+        font-family: 'Raleway', sans-serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+        display: block;
+      }
+      .hero-question-title {
+        color: #FFF !important;
+        text-align: center !important;
+        font-family: 'Raleway', sans-serif !important;
+        font-size: 22px !important;
+        font-style: normal !important;
+        font-weight: 700 !important;
+        line-height: 34px !important;
+        letter-spacing: -0.5px !important;
+      }
+      .hero-question-subtitle {
+        color: #FFF !important;
+        text-align: center !important;
+        font-family: 'Raleway', sans-serif !important;
+        font-size: 15px !important;
+        font-style: normal !important;
+        font-weight: 400 !important;
+        line-height: 24px !important;
+        opacity: 0.9 !important;
+      }
+      @media (max-width: 640px) {
+        .topic-card-title {
+          font-size: 20px !important;
+          line-height: 28px !important;
+        }
+        .hero-question-title {
+          font-size: 18px !important;
+          line-height: 28px !important;
+        }
+        .hero-question-subtitle {
+          font-size: 13px !important;
+          line-height: 20px !important;
+        }
+      }
+
+      /* Glass Arrow Buttons (Prev / Next) */
+      .glass-arrow-prev {
+        width: 56px;
+        height: 56px;
+        border-radius: 20px;
+        background: radial-gradient(circle at 70% 30%, #D8E7FF 0%, #A3C5FE 45%, #85ABFB 100%);
+        box-shadow: 0 8px 24px rgba(133, 171, 251, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.25s ease;
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+      .glass-arrow-prev:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(133, 171, 251, 0.55);
+      }
+      .glass-arrow-prev:active {
+        transform: translateY(0) scale(0.96);
+      }
+
+      .glass-arrow-next {
+        width: 56px;
+        height: 56px;
+        border-radius: 20px;
+        background: radial-gradient(circle at 35% 25%, #689DFF 0%, #2A72FF 50%, #155EEF 100%);
+        box-shadow: 0 8px 24px rgba(42, 114, 255, 0.45);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.25s ease;
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+      .glass-arrow-next:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(42, 114, 255, 0.6);
+      }
+      .glass-arrow-next:active {
+        transform: translateY(0) scale(0.96);
+      }
+
+      /* Segmented Pagination */
+      .figma-pagination {
+        display: inline-flex;
+        align-items: stretch;
+        background: #FFFFFF;
+        border: 1px solid #E4E7EC;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(16, 24, 40, 0.06);
+        overflow: hidden;
+      }
+      .figma-page-prev {
+        padding: 10px 18px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: #98A2B3;
+        background: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-right: 1px solid #EAECF0;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .figma-page-prev:hover {
+        background: #F9FAFB;
+      }
+      .figma-page-active {
+        min-width: 44px;
+        padding: 10px 14px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        color: #FFFFFF;
+        background: radial-gradient(circle at 40% 30%, #689DFF 0%, #2A72FF 60%, #155EEF 100%);
+        box-shadow: 0 4px 12px rgba(42, 114, 255, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-right: 1px solid #EAECF0;
+        cursor: pointer;
+      }
+      .figma-page-item {
+        min-width: 44px;
+        padding: 10px 14px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: #3538CD;
+        background: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-right: 1px solid #EAECF0;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+      }
+      .figma-page-item:hover {
+        background: #F4F6FE;
+        color: #155EEF;
+      }
+      .figma-page-next {
+        padding: 10px 20px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: #3538CD;
+        background: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+      }
+      .figma-page-next:hover {
+        background: #F4F6FE;
+        color: #155EEF;
+      }
+    </style>
+  </head>
+
+  <body class="font-body text-white antialiased">
+    <!-- ================= HERO & NAVBAR ================= -->
+    <div
+      class="relative overflow-hidden bg-[url('./assets/images/about-us/hero-banner-bg.png')] bg-no-repeat bg-cover"
+      style="background-position: top left"
+    >
+
+      <!-- ================= NAVBAR ================= -->
+      <header class="pt-4 md:pt-6 lg:pt-10 relative z-50">
+        <div class="container mx-auto px-4">
+          <nav
+            class="flex items-center justify-between gap-[24px] xl:gap-[40px] rounded-[24px] border border-solid border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.06)] px-6 py-[19px] backdrop-blur-[24.7px] relative"
+          >
+            <!-- Logo -->
+            <a href="./" class="shrink-0">
+              <img
+                src="./assets/images/logos/quick-news.svg"
+                alt="Quick News"
+              />
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <div class="flex-1 hidden lg:flex items-center justify-between">
+              <ul class="flex items-center gap-5 xl:gap-10 font-bold text-sm">
+                <li>
+                  <a
+                    href="./"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/quick-verify.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Verify AI</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about-us.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Our Vision</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/partnership.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Partnership</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/invest.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Invest</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/donate-now.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Donate</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/our-team.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Our Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/blog.html"
+                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+
+              <a
+                href="#"
+                class="btn btn-secondary shadow-custom-glow !px-6 xl:!px-10 flex items-center gap-2 btn-overlay"
+              >
+                Download the App
+                <img
+                  src="./assets/images/icons/light-blue-arrow-right.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+              </a>
+            </div>
+
+            <!-- Hamburger Toggle Button (Visible on Mobile/Tablet < lg) -->
+            <button
+              type="button"
+              id="menu-toggle-btn"
+              aria-label="Toggle navigation"
+              class="lg:hidden p-2 rounded-xl bg-white/10 text-white hover:bg-white/20 focus:outline-none transition-all"
+            >
+              <!-- Hamburger Icon (Default) -->
+              <svg
+                id="hamburger-icon"
+                class="w-6 h-6 stroke-current"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+
+              <!-- Close Cross Icon (Hidden by default) -->
+              <svg
+                id="close-icon"
+                class="w-6 h-6 stroke-current hidden"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <!-- Mobile Dropdown Menu Drawer -->
+            <div
+              id="mobile-menu"
+              class="hidden absolute top-[calc(100%+12px)] left-0 right-0 w-full rounded-[24px] border border-white/20 bg-[#1c1775]/95 backdrop-blur-2xl p-6 shadow-2xl flex-col gap-5 lg:hidden z-50 transition-all duration-300"
+            >
+              <ul class="flex flex-col gap-3 font-bold text-base text-white">
+                <li>
+                  <a
+                    href="./"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/quick-verify.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Verify AI</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about-us.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Our Vision</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/partnership.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Partnership</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/invest.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Invest</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/donate-now.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Donate</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/our-team.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Our Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/blog.html"
+                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+
+              <hr class="border-white/15 my-1" />
+
+              <a
+                href="#"
+                class="btn btn-secondary shadow-custom-glow btn-overlay w-full justify-center !py-3 flex items-center gap-2"
+              >
+                Download the App
+                <img
+                  src="./assets/images/icons/light-blue-arrow-right.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- ================= HERO BANNER ================= -->
+      <section
+        class="hero-banner pt-16 pb-24 md:pt-20 md:pb-28 lg:pt-24 lg:pb-32 relative z-10"
+      >
+        <div class="container mx-auto px-4 sm:px-6">
+          <div class="flex flex-col items-center text-center text-white">
+            <!-- Center Glowing Badge -->
+            <div class="relative mb-8 group">
+              <div
+                class="absolute -inset-3 bg-gradient-to-r from-[#00C4CC] to-[#A15BFC] rounded-full blur-2xl opacity-40 group-hover:opacity-70 transition duration-500"
+              ></div>
+              <img
+                src="./assets/images/gallery/gallery-banner-logo.svg"
+                alt="Quick News Global"
+                class="relative w-24 h-24 md:w-28 md:h-28 mx-auto block drop-shadow-[0_12px_40px_rgba(0,196,204,0.45)] transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            <!-- Headings & Description -->
+            <div class="flex flex-col items-center">
+              <div
+                role="heading"
+                aria-level="1"
+                class="hero-question-title w-full max-w-[700px]"
+              >
+                The secret to staying Globally aware without losing your time?<br class="hidden sm:inline" />
+                It starts with Quick News Global (AI)
+              </div>
+
+              <p class="hero-question-subtitle w-full max-w-[880px] mt-4">
+                The world does not need more news. It needs smarter news. Quick News Global (AI) cuts through the<br class="hidden md:inline" />
+                noise, delivers instant intelligence on every headline and gives you back the time you deserve. Stop<br class="hidden md:inline" />
+                scrolling. Start understanding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= HOT GLOBAL TOPICS SECTION ================= -->
+    <section class="py-[60px] lg:py-[94px] bg-white text-[#111827]">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Top Divider with decorative angles -->
+        <div class="divider divider-blue mb-10 lg:mb-[60px]"></div>
+
+        <!-- Section Header: Title & Navigation Controls -->
+        <div class="flex items-center justify-between mb-8 lg:mb-12">
+          <h2
+            class="text-primary-800 text-[28px] sm:text-[34px] lg:text-[44px] font-bold tracking-tight"
+          >
+            Hot Global Topics
+          </h2>
+
+          <!-- Arrow Controls (Glass Shaded) -->
+          <div class="flex items-center gap-4">
+            <button
+              type="button"
+              id="topics-prev-btn"
+              aria-label="Previous Page"
+              class="glass-arrow-prev"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              id="topics-next-btn"
+              aria-label="Next Page"
+              class="glass-arrow-next"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3x3 Cards Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 justify-items-center"
+        >
+          <!-- Card 1 (Market) -->
+          <article class="topic-card-box group">
+            <div class="w-full h-[220px] rounded-[24px] overflow-hidden relative bg-gray-100">
+              <img
+                src="./assets/images/blog/market.png"
+                alt="Strategy is Mastery."
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="w-full flex flex-col flex-1 justify-between px-2 pt-2 pb-1">
+              <div class="flex flex-col gap-2.5">
+                <h3 class="topic-card-title group-hover:text-primary-800 transition-colors">
+                  Strategy is Mastery.
+                </h3>
+                <p class="topic-card-subtitle">
+                  Scott Newton (Managing Partner at Thinking Dimensions Global)
+                </p>
+              </div>
+              <div class="w-full mt-auto pt-5">
+                <span class="topic-card-date">08 Jul 2026</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 (Belt) -->
+          <article class="topic-card-box group">
+            <div class="w-full h-[220px] rounded-[24px] overflow-hidden relative bg-gray-100">
+              <img
+                src="./assets/images/blog/belt.png"
+                alt="Indian Startup Develops AI-Enabled Wellness Band for Elderly Care"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="w-full flex flex-col flex-1 justify-between px-2 pt-2 pb-1">
+              <div class="flex flex-col gap-2.5">
+                <h3 class="topic-card-title group-hover:text-primary-800 transition-colors">
+                  Indian Startup Develops AI-Enabled Wellness Band for Elderly Care
+                </h3>
+                <p class="topic-card-subtitle">
+                  Harsh Vardhan Singh (Co-founder @ Bitwell)
+                </p>
+              </div>
+              <div class="w-full mt-auto pt-5">
+                <span class="topic-card-date">08 Jul 2026</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 (Grass) -->
+          <article class="topic-card-box group">
+            <div class="w-full h-[220px] rounded-[24px] overflow-hidden relative bg-gray-100">
+              <img
+                src="./assets/images/blog/grass.png"
+                alt="The moment you start apologizing for your background is the moment you hand over your advantage."
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="w-full flex flex-col flex-1 justify-between px-2 pt-2 pb-1">
+              <div class="flex flex-col gap-2.5">
+                <h3 class="topic-card-title group-hover:text-primary-800 transition-colors">
+                  The moment you start apologizing for your background is the moment you hand over your advantage.
+                </h3>
+                <p class="topic-card-subtitle">
+                  Andy Walsh (Podcast Host (Top 4% globally) || 2x Exits / 3x Founder)
+                </p>
+              </div>
+              <div class="w-full mt-auto pt-5">
+                <span class="topic-card-date">08 Jul 2026</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 (Market) -->
+          <article class="topic-card-box group">
+            <div class="w-full h-[220px] rounded-[24px] overflow-hidden relative bg-gray-100">
+              <img
+                src="./assets/images/blog/market.png"
+                alt="Strategy is Mastery."
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="w-full flex flex-col flex-1 justify-between px-2 pt-2 pb-1">
+              <div class="flex flex-col gap-2.5">
+                <h3 class="topic-card-title group-hover:text-primary-800 transition-colors">
+                  Strategy is Mastery.
+                </h3>
+                <p class="topic-card-subtitle">
+                  Scott Newton (Managing Partner at Thinking Dimensions Global)
+                </p>
+              </div>
+              <div class="w-full mt-auto pt-5">
+                <span class="topic-card-date">08 Jul 2026</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 (Belt) -->
+          <article class="topic-card-box group">
+            <div class="w-full h-[220px] rounded-[24px] overflow-hidden relative bg-gray-100">
+              <img
+                src="./assets/images/blog/belt.png"
+                alt="Indian Startup Develops AI-Enabled Wellness Band for Elderly Care"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="w-full flex flex-col flex-1 justify-between px-2 pt-2 pb-1">
+              <div class="flex flex-col gap-2.5">
+                <h3 class="topic-card-title group-hover:text-primary-800 transition-colors">
+                  Indian Startup Develops AI-Enabled Wellness Band for Elderly Care
+                </h3>
+                <p class="topic-card-subtitle">
+                  Harsh Vardhan Singh (Co-founder @ Bitwell)
+                </p>
+              </div>
+              <div class="w-full mt-auto pt-5">
+                <span class="topic-card-date">08 Jul 2026</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 (Grass) -->
+          <article class="topic-card-box group">
+            <div class="w-full h-[220px] rounded-[24px] overflow-hidden relative bg-gray-100">
+              <img
+                src="./assets/images/blog/grass.png"
+                alt="The moment you start apologizing for your background is the moment you hand over your advantage."
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="w-full flex flex-col flex-1 justify-between px-2 pt-2 pb-1">
+              <div class="flex flex-col gap-2.5">
+                <h3 class="topic-card-title group-hover:text-primary-800 transition-colors">
+                  The moment you start apologizing for your background is the moment you hand over your advantage.
+                </h3>
+                <p class="topic-card-subtitle">
+                  Andy Walsh (Podcast Host (Top 4% globally) || 2x Exits / 3x Founder)
+                </p>
+              </div>
+              <div class="w-full mt-auto pt-5">
+                <span class="topic-card-date">08 Jul 2026</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 7 (Market) -->
+          <article class="topic-card-box group">
+            <div class="w-full h-[220px] rounded-[24px] overflow-hidden relative bg-gray-100">
+              <img
+                src="./assets/images/blog/market.png"
+                alt="Strategy is Mastery."
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="w-full flex flex-col flex-1 justify-between px-2 pt-2 pb-1">
+              <div class="flex flex-col gap-2.5">
+                <h3 class="topic-card-title group-hover:text-primary-800 transition-colors">
+                  Strategy is Mastery.
+                </h3>
+                <p class="topic-card-subtitle">
+                  Scott Newton (Managing Partner at Thinking Dimensions Global)
+                </p>
+              </div>
+              <div class="w-full mt-auto pt-5">
+                <span class="topic-card-date">08 Jul 2026</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 8 (Belt) -->
+          <article class="topic-card-box group">
+            <div class="w-full h-[220px] rounded-[24px] overflow-hidden relative bg-gray-100">
+              <img
+                src="./assets/images/blog/belt.png"
+                alt="Indian Startup Develops AI-Enabled Wellness Band for Elderly Care"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="w-full flex flex-col flex-1 justify-between px-2 pt-2 pb-1">
+              <div class="flex flex-col gap-2.5">
+                <h3 class="topic-card-title group-hover:text-primary-800 transition-colors">
+                  Indian Startup Develops AI-Enabled Wellness Band for Elderly Care
+                </h3>
+                <p class="topic-card-subtitle">
+                  Harsh Vardhan Singh (Co-founder @ Bitwell)
+                </p>
+              </div>
+              <div class="w-full mt-auto pt-5">
+                <span class="topic-card-date">08 Jul 2026</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 9 (Grass) -->
+          <article class="topic-card-box group">
+            <div class="w-full h-[220px] rounded-[24px] overflow-hidden relative bg-gray-100">
+              <img
+                src="./assets/images/blog/grass.png"
+                alt="The moment you start apologizing for your background is the moment you hand over your advantage."
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="w-full flex flex-col flex-1 justify-between px-2 pt-2 pb-1">
+              <div class="flex flex-col gap-2.5">
+                <h3 class="topic-card-title group-hover:text-primary-800 transition-colors">
+                  The moment you start apologizing for your background is the moment you hand over your advantage.
+                </h3>
+                <p class="topic-card-subtitle">
+                  Andy Walsh (Podcast Host (Top 4% globally) || 2x Exits / 3x Founder)
+                </p>
+              </div>
+              <div class="w-full mt-auto pt-5">
+                <span class="topic-card-date">08 Jul 2026</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Pagination Controls (Segmented Bar) -->
+        <div class="flex items-center justify-end mt-10 lg:mt-14">
+          <div class="figma-pagination">
+            <button type="button" class="figma-page-prev">Previous</button>
+            <button type="button" class="figma-page-active">1</button>
+            <button type="button" class="figma-page-item">2</button>
+            <button type="button" class="figma-page-item">3</button>
+            <button type="button" class="figma-page-item">4</button>
+            <button type="button" class="figma-page-item">5</button>
+            <button type="button" class="figma-page-next">Next</button>
+          </div>
+        </div>
+
+        <!-- Bottom Section Divider with upward decorative corners -->
+        <div class="divider divider-blue divider-up mt-10 lg:mt-[60px]"></div>
+      </div>
+    </section>
+
+    <!-- ================= DOWNLOAD APP SECTION ================= -->
+    <section class="py-[60px] lg:py-[94px] bg-[#EFEFFA]">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="divider divider-blue mb-10 lg:mb-[80px]"></div>
+
+        <h2 class="text-primary-800 text-[28px] lg:text-[40px] font-bold mb-8">
+          Download our app now for free
+        </h2>
+
+        <div class="grid gap-4 md:gap-6 xl:gap-8 lg:grid-cols-2">
+          <!-- iOS card -->
+          <div
+            class="flex flex-col gap-10 rounded-[24px] py-5 px-6 text-light-900 card-overlay-primary shadow-custom-black"
+          >
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col gap-2 w-full max-w-[382px]">
+                <h3
+                  class="text-[22px] lg:text-[32px] leading-[28px] lg:leading-[38px] font-bold"
+                >
+                  IOS App Download
+                </h3>
+                <p class="text-sm leading-5 font-bold">
+                  Scan the QR code or use the button below to download our iOS
+                  app.
+                </p>
+              </div>
+              <img
+                src="./assets/images/home/apple.png"
+                alt="Apple iOS"
+                width="81"
+                height="100"
+              />
+            </div>
+
+            <div class="flex justify-center">
+              <img
+                src="./assets/images/home/white-qr.svg"
+                alt="iOS QR Code"
+                width="224"
+                height="224"
+              />
+            </div>
+
+            <a
+              href="#"
+              class="btn btn-primary btn-overlay-primary shadow-custom-black"
+              >Download</a
+            >
+          </div>
+
+          <!-- Android card -->
+          <div
+            class="flex flex-col gap-10 rounded-[24px] py-5 px-6 text-primary-900 bg-[rgba(255,255,255,0.06)] border border-solid border-[rgba(0,0,0,0.10)] relative z-[1] overflow-hidden"
+          >
+            <div
+              class="absolute z-[-1] bottom-[-670px] right-[-255px] rotate-[-128.459deg] rounded-[755px] blur-[100.0378189086914px] bg-[linear-gradient(152deg,#FFF_62.37%,#1909D9_82.7%)] w-[746px] h-[755px]"
+            ></div>
+            <div
+              class="absolute z-[-2] rotate-[-128.459deg] bottom-[-750px] left-[-420px] rounded-[755px] blur-[100.0378189086914px] bg-[linear-gradient(152deg,#FFF_62.37%,#1909D9_82.7%)] w-[746px] h-[755px]"
+            ></div>
+
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col gap-2 w-full max-w-[382px]">
+                <h3
+                  class="text-[22px] lg:text-[32px] leading-[28px] lg:leading-[38px] font-normal"
+                >
+                  Android App Download
+                </h3>
+                <p class="text-sm leading-5 font-bold">
+                  Scan the QR code or use the button below to download our
+                  Android app..
+                </p>
+              </div>
+              <img
+                src="./assets/images/home/anroid.png"
+                alt="Android"
+                width="81"
+                height="100"
+              />
+            </div>
+
+            <div class="flex justify-center">
+              <img
+                src="./assets/images/home/blue-qr.svg"
+                alt="Android QR Code"
+                width="224"
+                height="224"
+              />
+            </div>
+
+            <a href="#" class="btn btn-overlay shadow-custom-black">Download</a>
+          </div>
+        </div>
+
+        <div class="divider divider-blue divider-up mt-10 lg:mt-[80px]"></div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer
+      class="py-[50px] bg-[url('./assets/images/home/footer-bg.png')] bg-no-repeat bg-cover text-light-950"
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="divider"></div>
+
+        <!-- Main Footer Content -->
+        <div class="py-12 lg:py-16">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-9">
+            <!-- Left Column: Branding & Description -->
+            <div class="lg:col-span-full flex flex-col justify-between">
+              <div>
+                <!-- Brand Icon / Logo -->
+                <a href="/" class="inline-block">
+                  <div
+                    class="w-10 h-10 rounded-full bg-light-1950 border border-white/20 flex items-center justify-center"
+                  >
+                    <img
+                      src="./assets/images/logos/quick-news.svg"
+                      alt="Quick News"
+                      class="w-6 h-6 object-contain"
+                    />
+                  </div>
+                </a>
+
+                <!-- Brand Title -->
+                <h3
+                  class="text-3xl font-extrabold tracking-tight mt-4 mb-3 text-white"
+                >
+                  Quick News Global
+                </h3>
+
+                <!-- Description -->
+                <p
+                  class="text-light-100 text-sm leading-relaxed max-w-sm font-normal"
+                >
+                  Quick News Global (AI) tells you everything you actually need
+                  to know about each day's biggest stories with clarity, fact
+                  checked credibility, and brevity. Stay ahead of the curve,
+                  grasp the context behind breaking events, and make smarter
+                  decisions everyday with concise, verified intelligence.
+                </p>
+              </div>
+            </div>
+
+            <!-- Middle Columns: Links & Social -->
+            <div
+              class="lg:col-span-7 xlg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-8 py-4"
+            >
+              <!-- Quick Links -->
+              <div>
+                <h4
+                  class="text-[18px] leading-[20px] tracking-[0.21px] font-medium mb-6"
+                >
+                  Quick Links
+                </h4>
+                <ul class="space-y-3 text-base leading-[20px]">
+                  <li>
+                    <a href="./" class="hover:text-white transition-colors"
+                      >Home</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/about-us.html"
+                      class="hover:text-white transition-colors"
+                      >Our Vision</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/partnership.html"
+                      class="hover:text-white transition-colors"
+                      >Partnership</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/invest.html"
+                      class="hover:text-white transition-colors"
+                      >Invest</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/donate-now.html"
+                      class="hover:text-white transition-colors"
+                      >Donate</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/our-team.html" class="hover:text-white transition-colors"
+                      >Our Team</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/blog.html" class="hover:text-white transition-colors font-bold text-white"
+                      >Blog</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Social Links -->
+              <div>
+                <h4
+                  class="text-[18px] leading-[20px] tracking-[0.21px] font-medium mb-6"
+                >
+                  Social Links
+                </h4>
+                <div class="grid grid-cols-3 gap-y-4 gap-x-2 max-w-[150px]">
+                  <a href="#" aria-label="Facebook">
+                    <img src="./assets/images/icons/facebook.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="Instagram">
+                    <img src="./assets/images/icons/instagram.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="Twitter">
+                    <img src="./assets/images/icons/twitter.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="TikTok">
+                    <img src="./assets/images/icons/tik-tok.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="Truth">
+                    <img src="./assets/images/icons/truth.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="LinkedIn">
+                    <img src="./assets/images/icons/linkdin.svg" alt="" />
+                  </a>
+                  <a href="#" aria-label="YouTube">
+                    <img src="./assets/images/icons/youtube.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+
+              <!-- Legal -->
+              <div>
+                <h4
+                  class="text-[18px] leading-[20px] tracking-[0.21px] font-medium mb-6"
+                >
+                  Legal
+                </h4>
+                <ul class="space-y-3 text-base leading-[20px]">
+                  <li>
+                    <a href="#" class="hover:text-white transition-colors"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition-colors"
+                      >Terms of Service</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition-colors"
+                      >Editorial Guidelines</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Column: App Download Cards -->
+            <div
+              class="lg:col-span-5 xlg:col-span-4 flex flex-col space-y-4 justify-start text-primary-950 max-w-[412px]"
+            >
+              <!-- iOS App Card -->
+              <div
+                class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all"
+              >
+                <div class="flex flex-col gap-[15px]">
+                  <div class="shrink-0">
+                    <img src="./assets/images/icons/footer-apple.svg" alt="" />
+                  </div>
+
+                  <div class="flex flex-col gap-[3px]">
+                    <h5 class="text-base font-bold">
+                      Download our app now for free
+                    </h5>
+                    <p class="text-[12px] leading-tight">
+                      Scan the QR code or use the button below to download our
+                      iOS app.
+                    </p>
+                  </div>
+                </div>
+                <!-- iOS QR Code -->
+                <div
+                  class="w-[93px] h-[93px] shrink-0 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/images/icons/footer-apple-qr.svg"
+                    alt="iOS QR Code"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+
+              <!-- Android App Card -->
+              <div
+                class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all"
+              >
+                <div class="flex flex-col gap-[15px]">
+                  <div class="shrink-0">
+                    <img src="./assets/images/icons/footer-anroid.svg" alt="" />
+                  </div>
+
+                  <div class="flex flex-col gap-[3px]">
+                    <h5 class="text-base font-bold">
+                      Download our app now for free
+                    </h5>
+                    <p class="text-[12px] leading-tight">
+                      Scan the QR code or use the button below to download our
+                      Android app.
+                    </p>
+                  </div>
+                </div>
+                <!-- Android QR Code -->
+                <div
+                  class="w-[93px] h-[93px] shrink-0 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/images/icons/footer-anroid-qr.svg"
+                    alt="Android QR Code"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider divider-up"></div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

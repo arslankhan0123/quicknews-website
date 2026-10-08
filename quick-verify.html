@@ -1,581 +1,432 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quick News Global</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind-config.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick News Global</title>
 
-  <body class="font-body text-white antialiased">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind-config.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-body text-white antialiased">
+  <div class="relative min-h-screen overflow-hidden bg-[#000] pb-[64px]">
     <div
-      class="relative min-h-full overflow-hidden bg-[#000] relative pb-[64px]"
-    >
-      <div
-        class="absolute top-0 left-0 bg-[url('./assets/images/quick-verify-ai/overlay-start.png')] w-full max-w-[961px] h-[889px]"
-      ></div>
-      <div
-        class="absolute bottom-0 right-0 bg-[url('./assets/images/quick-verify-ai/overlay-end.png')] w-full max-w-[796px] h-[837px]"
-      ></div>
-      <div
-        class="absolute top-0 left-0 bg-[url('./assets/images/quick-verify-ai/magnative-lines.png')] w-full h-full bg-no-repeat"
-        style="background-size: 100% auto; background-position: center 49%"
-      ></div>
-      <div class="absolute bottom-[40px] left-[82px]">
-        <img
-          src="./assets/images/icons/fast.svg"
-          alt=""
-          width="40"
-          height="44"
-        />
-      </div>
-      <!-- ================= NAVBAR ================= -->
-      <header class="pt-4 md:pt-6 lg:pt-10 relative z-50">
-        <div class="container mx-auto px-4">
-          <nav
-            class="flex items-center justify-between gap-[24px] xl:gap-[40px] rounded-[24px] border border-solid border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.06)] px-6 py-[19px] backdrop-blur-[24.7px] relative"
-          >
-            <!-- Logo -->
-            <a href="./" class="shrink-0">
-              <img
-                src="./assets/images/logos/quick-news.svg"
-                alt="Quick News"
-              />
+      class="absolute top-0 left-0 bg-[url('./assets/images/quick-verify-ai/overlay-start.png')] w-full max-w-[961px] h-[889px]">
+    </div>
+    <div
+      class="absolute bottom-0 right-0 bg-[url('./assets/images/quick-verify-ai/overlay-end.png')] w-full max-w-[796px] h-[837px]">
+    </div>
+    <div
+      class="absolute top-0 left-0 bg-[url('./assets/images/quick-verify-ai/magnative-lines.png')] w-full h-full bg-no-repeat"
+      style="background-size: 100% auto; background-position: center 49%"></div>
+    <div class="absolute bottom-[40px] left-[82px]">
+      <img src="./assets/images/icons/fast.svg" alt="" width="40" height="44" />
+    </div>
+    <!-- Crosshair decorative icon (right side) -->
+    <div class="absolute top-[42%] right-[80px] hidden lg:block z-10">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 1L13 7H19L16 1Z" fill="white" fill-opacity="0.7" />
+        <path d="M16 31L13 25H19L16 31Z" fill="white" fill-opacity="0.7" />
+        <path d="M1 16L7 13V19L1 16Z" fill="white" fill-opacity="0.7" />
+        <path d="M31 16L25 13V19L31 16Z" fill="white" fill-opacity="0.7" />
+        <line x1="16" y1="7" x2="16" y2="13" stroke="white" stroke-opacity="0.7" stroke-width="1.5" />
+        <line x1="16" y1="19" x2="16" y2="25" stroke="white" stroke-opacity="0.7" stroke-width="1.5" />
+        <line x1="7" y1="16" x2="13" y2="16" stroke="white" stroke-opacity="0.7" stroke-width="1.5" />
+        <line x1="19" y1="16" x2="25" y2="16" stroke="white" stroke-opacity="0.7" stroke-width="1.5" />
+        <circle cx="16" cy="16" r="3.5" stroke="white" stroke-opacity="0.7" stroke-width="1.5" />
+      </svg>
+    </div>
+    <!-- ================= NAVBAR ================= -->
+    <header class="pt-4 md:pt-6 lg:pt-10 relative z-50">
+      <div class="container mx-auto px-4">
+        <nav
+          class="flex items-center justify-between gap-[24px] xl:gap-[40px] rounded-[24px] border border-solid border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.06)] px-6 py-[19px] backdrop-blur-[24.7px] relative">
+          <!-- Logo -->
+          <a href="./" class="shrink-0">
+            <img src="./assets/images/logos/quick-news.svg" alt="Quick News" />
+          </a>
+
+          <!-- Desktop Navigation Menu -->
+          <div class="flex-1 hidden lg:flex items-center justify-between">
+            <ul class="flex items-center gap-5 xl:gap-10 font-bold text-sm">
+              <li>
+                <a href="./"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Home</a>
+              </li>
+              <li>
+                <a href="/quick-verify.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Verify AI</a>
+              </li>
+              <li>
+                <a href="/about-us.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Our Vision</a>
+              </li>
+              <li>
+                <a href="/partnership.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Partnership</a>
+              </li>
+              <li>
+                <a href="/invest.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Invest</a>
+              </li>
+              <li>
+                <a href="/donate-now.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Donate</a>
+              </li>
+              <li>
+                <a href="/our-team.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Our Team</a>
+              </li>
+              <li>
+                <a href="/blog.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Blog</a>
+              </li>
+            </ul>
+
+            <a href="#"
+              class="btn btn-secondary shadow-custom-glow !px-6 xl:!px-10 flex items-center gap-2 btn-overlay">
+              Download the App
+              <img src="./assets/images/icons/light-blue-arrow-right.svg" alt="" width="20" height="20" />
             </a>
+          </div>
 
-            <!-- Desktop Navigation Menu -->
-            <div class="flex-1 hidden lg:flex items-center justify-between">
-              <ul class="flex items-center gap-5 xl:gap-10 font-bold text-sm">
-                <li>
-                  <a
-                    href="./"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/quick-verify.html"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Verify AI</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/about-us.html"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Our Vision</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/partnership.html"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Partnership</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/invest.html"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Invest</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/donate-now.html"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Donate</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Our Team</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Blog</a
-                  >
-                </li>
-              </ul>
+          <!-- Hamburger Toggle Button (Visible on Mobile/Tablet < lg) -->
+          <button type="button" id="menu-toggle-btn" aria-label="Toggle navigation"
+            class="lg:hidden p-2 rounded-xl bg-white/10 text-white hover:bg-white/20 focus:outline-none transition-all">
+            <!-- Hamburger Icon (Default) -->
+            <svg id="hamburger-icon" class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
 
-              <a
-                href="#"
-                class="btn btn-secondary shadow-custom-glow !px-6 xl:!px-10 flex items-center gap-2 btn-overlay"
-              >
-                Download the App
-                <img
-                  src="./assets/images/icons/light-blue-arrow-right.svg"
-                  alt=""
-                  width="20"
-                  height="20"
-                />
-              </a>
-            </div>
+            <!-- Close Cross Icon (Hidden by default) -->
+            <svg id="close-icon" class="w-6 h-6 stroke-current hidden" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
 
-            <!-- Hamburger Toggle Button (Visible on Mobile/Tablet < lg) -->
-            <button
-              type="button"
-              id="menu-toggle-btn"
-              aria-label="Toggle navigation"
-              class="lg:hidden p-2 rounded-xl bg-white/10 text-white hover:bg-white/20 focus:outline-none transition-all"
-            >
-              <!-- Hamburger Icon (Default) -->
-              <svg
-                id="hamburger-icon"
-                class="w-6 h-6 stroke-current"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+          <!-- Mobile Dropdown Menu Drawer -->
+          <div id="mobile-menu"
+            class="hidden absolute top-[calc(100%+12px)] left-0 right-0 w-full rounded-[24px] border border-white/20 bg-[#1c1775]/95 backdrop-blur-2xl p-6 shadow-2xl flex-col gap-5 lg:hidden z-50 transition-all duration-300">
+            <ul class="flex flex-col gap-3 font-bold text-base text-white">
+              <li>
+                <a href="./"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Home</a>
+              </li>
+              <li>
+                <a href="/quick-verify.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Verify
+                  AI</a>
+              </li>
+              <li>
+                <a href="/about-us.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Our
+                  Vision</a>
+              </li>
+              <li>
+                <a href="/partnership.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Partnership</a>
+              </li>
+              <li>
+                <a href="/invest.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Invest</a>
+              </li>
+              <li>
+                <a href="/donate-now.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Donate</a>
+              </li>
+              <li>
+                <a href="/our-team.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Our
+                  Team</a>
+              </li>
+              <li>
+                <a href="/blog.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Blog</a>
+              </li>
+            </ul>
 
-              <!-- Close Cross Icon (Hidden by default) -->
-              <svg
-                id="close-icon"
-                class="w-6 h-6 stroke-current hidden"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
+            <hr class="border-white/15 my-1" />
 
-            <!-- Mobile Dropdown Menu Drawer -->
-            <div
-              id="mobile-menu"
-              class="hidden absolute top-[calc(100%+12px)] left-0 right-0 w-full rounded-[24px] border border-white/20 bg-[#1c1775]/95 backdrop-blur-2xl p-6 shadow-2xl flex-col gap-5 lg:hidden z-50 transition-all duration-300"
-            >
-              <ul class="flex flex-col gap-3 font-bold text-base text-white">
-                <li>
-                  <a
-                    href="./"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/quick-verify.html"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Verify AI</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/about-us.html"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Our Vision</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/partnership.html"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Partnership</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/invest.html"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Invest</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/donate-now.html"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Donate</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Our Team</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Blog</a
-                  >
-                </li>
-              </ul>
+            <a href="#"
+              class="btn btn-secondary shadow-custom-glow btn-overlay w-full justify-center !py-3 flex items-center gap-2">
+              Download the App
+              <img src="./assets/images/icons/light-blue-arrow-right.svg" alt="" width="20" height="20" />
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-              <hr class="border-white/15 my-1" />
+    <section class="relative z-[1] text-center pt-[10px] md:pt-[20px] lg:pt-[28px]">
+      <div class="container">
+        <div class="w-full max-w-[928px] mx-auto">
+          <img src="./assets/images/quick-verify-ai/fake.png" alt="" width="380" height="240"
+            class="mx-auto block w-[200px] xs:w-[260px] md:w-[300px] lg:w-[380px] h-auto" />
+          <h1
+            class="clip-heading !font-[300] !text-[44px] md:!text-[64px] lg:!text-[89px] !leading-[90px] md:!leading-[100px] lg:!leading-[135px]">
+            Quick Verifi-AI
+          </h1>
 
-              <a
-                href="#"
-                class="btn btn-secondary shadow-custom-glow btn-overlay w-full justify-center !py-3 flex items-center gap-2"
-              >
-                Download the App
-                <img
-                  src="./assets/images/icons/light-blue-arrow-right.svg"
-                  alt=""
-                  width="20"
-                  height="20"
-                />
-              </a>
-            </div>
-          </nav>
-        </div>
-      </header>
-
-      <section class="relative z-[1] text-center pt-[58px]">
-        <div class="container">
-          <div class="w-full max-w-[928px] mx-auto">
-            <img
-              src="./assets/images/quick-verify-ai/fake.png"
-              alt=""
-              width="380"
-              height="240"
-              class="mx-auto block"
-            />
-            <h1 class="clip-heading !font-[300] !text-[44px] md:!text-[64px] lg:!text-[89px] !leading-[90px] md:!leading-[100px] lg:!leading-[135px]">
-              Quick Verifi-AI
-            </h1>
-
-            <div class="relative">
-              <form
-                class="form text-left flex items-center relative "
-                style="background-size: 100% auto"
-              >
-              <!-- bg-[url('./assets/images/quick-verify-ai/searchbar.png')] bg-no-repeat w-full block h-[124px] -->
+          <div class="relative mt-2.5 md:mt-3.5 lg:mt-3">
+            <form class="form text-left flex items-center relative w-full">
+              <div class="searchbar-glow-wrapper w-full">
                 <div
-                  class="w-full rounded-[44px] overflow-hidden shadow-form backdrop-blur-[14.505850791931152px]"
+                  class="searchbar-inner px-5 md:px-7 py-2.5 md:py-3 gap-4 flex-row"
                 >
-                <!-- h-[64%] mt-[-9px] w-[95.5%] mx-auto -->
-                  <div
-                    class="flex flex-col md:flex-row gap-4 items-center justify-between h-full bg-black px-[22px] py-[15px]"
-                  >
-                    <div class="w-full md:flex-1 h-full">
-                      <input
-                        type="text"
-                        name="verify"
-                        id="verify"
-                        placeholder="Type news to verify..."
-                        class="py-[14px] pr-4 bg-transparent text-[18px] font-normal text-light-950 w-full h-full placeholder:text-[18px] placeholder:font-normal placeholder:text-light-950 focus:outline-none focus:border-none"
+                  <div class="flex-1 min-w-0">
+                    <input
+                      type="text"
+                      name="verify"
+                      id="verify"
+                      placeholder="Type news to verify..."
+                      class="py-2 bg-transparent text-[16px] md:text-[18px] font-normal text-white w-full placeholder:text-[16px] md:placeholder:text-[18px] placeholder:font-normal placeholder:text-white/70 focus:outline-none focus:border-none"
+                    />
+                  </div>
+                  <div class="shrink-0">
+                    <button
+                      type="button"
+                      class="flex items-center shadow-form rounded-full justify-center hover:opacity-100 gap-2 px-5 py-2.5 md:px-[24px] md:py-[13px] relative z-[1] before:content-[url('./assets/images/quick-verify-ai/form-button.png')] before:z-[-1] before:absolute before:inset-0 before:w-full before:h-full text-white font-medium text-sm md:text-base cursor-pointer"
+                    >
+                      Verify
+                      <img
+                        src="./assets/images/logos/quick-news.svg"
+                        alt="Quick News"
+                        width="24"
+                        height="24"
+                        class="w-5 h-5 md:w-[26px] md:h-[26px]"
                       />
-                    </div>
-                    <div class="shrink-0 w-full md:max-w-fit">
-                      <button
-                        class="flex items-center show-custom-glow justify-center hover:opacity-100 gap-2 px-[24px] py-[13px] relative z-[1] before:content-[url('./assets/images/quick-verify-ai/form-button.png')] before:z-[-1] before:absolute before:inset-0 before:w-full before:h-full"
-                      >
-                        Verify
-                        <img
-                          src="./assets/images/logos/quick-news.svg"
-                          alt="Quick News"
-                          width="26"
-                          height="26"
-                        />
-                      </button>
-                    </div>
+                    </button>
                   </div>
                 </div>
-              </form>
+              </div>
+            </form>
 
-              <div
-                class="quick-ai-dropdown hidden rounded-[44px] shadow-form-input p-5 text-[16px] font-normal text-left"
-              >
-                <div
-                  class="flex flex-col gap-[42px] bg-[linear-gradient(0deg,#000_0%,#000_100%),#D8D8D8]"
-                >
+            <div
+              class="quick-ai-dropdown hidden mt-5 w-full text-left"
+            >
+              <div class="verify-result-wrapper w-full">
+                <div class="verify-result-inner p-6 md:p-8 flex flex-col gap-6">
+                  <!-- User Query Pill -->
                   <div
-                    class="rounded-[60px] bg-[rgba(255,255,255,0.04)] text-shadow-[1px_1px_1px_rgba(0,0,0,0.25)] p-4 w-full max-w-fit"
+                    id="user-query-pill"
+                    class="rounded-full bg-white/[0.05] border border-white/10 px-5 py-2 text-[14px] md:text-[15px] text-white/90 w-fit font-normal"
                   >
                     trump died?
                   </div>
 
-                  <div class="flex flex-row gap-[10px]">
-                    <div class="shrink-0 w-full max-w-[33px]">
-                      <img src="./assets/images/logos/quick-news.svg" alt="" />
+                  <!-- AI Answer Row -->
+                  <div class="flex items-start md:items-center gap-3.5 md:gap-4">
+                    <div class="shrink-0 pt-0.5 md:pt-0">
+                      <img
+                        src="./assets/images/logos/quick-news.svg"
+                        alt="Quick News"
+                        class="w-7 h-7 md:w-8 md:h-8 object-contain"
+                      />
                     </div>
+                    <p class="text-[15px] md:text-[16px] leading-[1.6] text-white font-normal flex-1">
+                      Recent news reports indicate Donald Trump is active and engaging in political discussions, refuting claims of his death.
+                    </p>
+                  </div>
 
-                    <div class="flex-1">
-                      <div class="flex flex-col gap-[30px]">
-                        <div>
-                          <p>
-                            Recent news reports indicate Donald Trump is active
-                            and engaging in political discussions, refuting
-                            claims of his death.
-                          </p>
-                        </div>
-
-                        <div class="flex justify-between gap-4">
-                          <div>Source: FOXNEWS</div>
-                          <div>Credit left: 0</div>
-                        </div>
-                      </div>
-                    </div>
+                  <!-- Source & Credit Row -->
+                  <div class="flex items-center justify-between text-xs md:text-sm text-[#9ca3af] pt-1">
+                    <div>Source: <span class="text-white font-normal">FOXNEWS</span></div>
+                    <div>Credit left: <span class="text-white font-normal">0</span></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
-
-    <footer
-      class="py-[50px] bg-[url('./assets/images/home/footer-bg.png')] bg-no-repeat bg-cover text-light-950"
-    >
-      <div class="container">
-        <div class="divider"></div>
-
-        <!-- Main Footer Content -->
-        <div class="py-12 lg:py-16">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-9">
-            <!-- Left Column: Branding & Description -->
-            <div class="lg:col-span-full flex flex-col justify-between">
-              <div>
-                <!-- Brand Icon / Logo -->
-                <a href="/" class="inline-block">
-                  <div
-                    class="w-10 h-10 rounded-full bg-light-1950 border border-white/20 flex items-center justify-center"
-                  >
-                    <img
-                      src="./assets/images/logos/quick-news.svg"
-                      alt="Quick News Global"
-                      class="w-6 h-6"
-                    />
-                  </div>
-                </a>
-
-                <!-- Heading -->
-                <h2 class="!mb-6">Quick News Global</h2>
-
-                <!-- Paragraph -->
-                <p class="text-base leading-[20px] max-w-[445px]">
-                  Quick News Global's (AI) tells you everything you actually
-                  need to know including how the story is being framed. Global
-                  events, local stories, and everything in between, delivered in
-                  45 words. Know the headline, but also know the feeling behind
-                  it.
-                  <a
-                    href="#"
-                    class="underline text-white hover:text-primary-400 transition-colors"
-                    >Download now</a
-                  >
-                  to stay informed and united.
-                </p>
-              </div>
-            </div>
-
-            <!-- Middle Column: Navigation Columns (Menu, Social, Legal) -->
-            <div
-              class="lg:col-span-7 xlg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-[90px] w-full max-w-[752px]"
-            >
-              <!-- Menu Links -->
-              <div>
-                <h4
-                  class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6"
-                >
-                  Menu Links
-                </h4>
-                <ul class="space-y-3 text-base leading-[20px]">
-                  <li>
-                    <a href="./" class="hover:text-white transition-colors"
-                      >Home</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/about-us.html" class="hover:text-white transition-colors"
-                      >Our Vision</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/partnership.html" class="hover:text-white transition-colors"
-                      >Partnerships</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/invest.html" class="hover:text-white transition-colors"
-                      >Invest</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/donate-now.html" class="hover:text-white transition-colors"
-                      >Donate</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-white transition-colors"
-                      >Our Team</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-white transition-colors"
-                      >Blogs</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Social Links -->
-              <div>
-                <h4
-                  class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6"
-                >
-                  Social Links
-                </h4>
-                <div
-                  class="flex flex-wrap md:grid md:grid-cols-4 gap-4 md:gap-x-[17px] md:gap-y-[19px]"
-                >
-                  <a href="#" aria-label="Facebook">
-                    <img src="./assets/images/icons/facebook.svg" alt="" />
-                  </a>
-                  <a href="#" aria-label="Instagram">
-                    <img src="./assets/images/icons/instagram.svg" alt="" />
-                  </a>
-                  <a href="#" aria-label="Twitter">
-                    <img src="./assets/images/icons/twitter.svg" alt="" />
-                  </a>
-                  <a href="#" aria-label="TikTok">
-                    <img src="./assets/images/icons/tik-tok.svg" alt="" />
-                  </a>
-                  <a href="#" aria-label="Truth">
-                    <img src="./assets/images/icons/truth.svg" alt="" />
-                  </a>
-                  <a href="#" aria-label="LinkedIn">
-                    <img src="./assets/images/icons/linkdin.svg" alt="" />
-                  </a>
-                  <a href="#" aria-label="YouTube">
-                    <img src="./assets/images/icons/youtube.svg" alt="" />
-                  </a>
-                </div>
-              </div>
-
-              <!-- Legal -->
-              <div>
-                <h4
-                  class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6"
-                >
-                  Legal
-                </h4>
-                <ul class="space-y-3 text-base leading-[20px]">
-                  <li>
-                    <a href="#" class="hover:text-white transition-colors"
-                      >Privacy Policy</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-white transition-colors"
-                      >Terms of Service</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-white transition-colors"
-                      >Editorial Guidelines</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Right Column: App Download Cards -->
-            <div
-              class="lg:col-span-5 xlg:col-span-4 flex flex-col space-y-4 justify-start text-primary-950 max-w-[412px]"
-            >
-              <!-- iOS App Card -->
-              <div
-                class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all"
-              >
-                <div class="flex flex-col gap-[15px]">
-                  <div class="shrink-0">
-                    <img src="./assets/images/icons/footer-apple.svg" alt="" />
-                  </div>
-
-                  <div class="flex flex-col gap-[3px]">
-                    <h5 class="text-base font-bold">
-                      Download our app now for free
-                    </h5>
-                    <p class="text-[12px] leading-tight">
-                      Scan the QR code or use the button below to download our
-                      iOS app.
-                    </p>
-                  </div>
-                </div>
-                <!-- Dummy QR Code -->
-                <div
-                  class="w-[93px] h-[93px] shrink-0 flex items-center justify-center"
-                >
-                  <img
-                    src="./assets/images/icons/footer-apple-qr.svg"
-                    alt="iOS QR Code"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-
-              <!-- Android App Card -->
-              <div
-                class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all"
-              >
-                <div class="flex flex-col gap-[15px]">
-                  <div class="shrink-0">
-                    <img src="./assets/images/icons/footer-anroid.svg" alt="" />
-                  </div>
-
-                  <div class="flex flex-col gap-[3px]">
-                    <h5 class="text-base font-bold">
-                      Download our app now for free
-                    </h5>
-                    <p class="text-[12px] leading-tight">
-                      Scan the QR code or use the button below to download our
-                      Android app.
-                    </p>
-                  </div>
-                </div>
-                <!-- Dummy QR Code -->
-                <div
-                  class="w-[93px] h-[93px] shrink-0 flex items-center justify-center"
-                >
-                  <img
-                    src="./assets/images/icons/footer-anroid-qr.svg"
-                    alt="Anroid QR Code"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="divider divider-up"></div>
       </div>
-    </footer>
+    </section>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="./index.js"></script>
-  </body>
+  <footer class="py-[50px] bg-[url('./assets/images/home/footer-bg.png')] bg-no-repeat bg-cover text-light-950">
+    <div class="container">
+      <div class="divider"></div>
+
+      <!-- Main Footer Content -->
+      <div class="py-12 lg:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-9">
+          <!-- Left Column: Branding & Description -->
+          <div class="lg:col-span-full flex flex-col justify-between">
+            <div>
+              <!-- Brand Icon / Logo -->
+              <a href="/" class="inline-block">
+                <div
+                  class="w-10 h-10 rounded-full bg-light-1950 border border-white/20 flex items-center justify-center">
+                  <img src="./assets/images/logos/quick-news.svg" alt="Quick News Global" class="w-6 h-6" />
+                </div>
+              </a>
+
+              <!-- Heading -->
+              <h2 class="!mb-6">Quick News Global</h2>
+
+              <!-- Paragraph -->
+              <p class="text-base leading-[20px] max-w-[445px]">
+                Quick News Global's (AI) tells you everything you actually
+                need to know including how the story is being framed. Global
+                events, local stories, and everything in between, delivered in
+                45 words. Know the headline, but also know the feeling behind
+                it.
+                <a href="#" class="underline text-white hover:text-primary-400 transition-colors">Download now</a>
+                to stay informed and united.
+              </p>
+            </div>
+          </div>
+
+          <!-- Middle Column: Navigation Columns (Menu, Social, Legal) -->
+          <div
+            class="lg:col-span-7 xlg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-[90px] w-full max-w-[752px]">
+            <!-- Menu Links -->
+            <div>
+              <h4 class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6">
+                Menu Links
+              </h4>
+              <ul class="space-y-3 text-base leading-[20px]">
+                <li>
+                  <a href="./" class="hover:text-white transition-colors">Home</a>
+                </li>
+                <li>
+                  <a href="/about-us.html" class="hover:text-white transition-colors">Our Vision</a>
+                </li>
+                <li>
+                  <a href="/partnership.html" class="hover:text-white transition-colors">Partnerships</a>
+                </li>
+                <li>
+                  <a href="/invest.html" class="hover:text-white transition-colors">Invest</a>
+                </li>
+                <li>
+                  <a href="/donate-now.html" class="hover:text-white transition-colors">Donate</a>
+                </li>
+                <li>
+                  <a href="/our-team.html" class="hover:text-white transition-colors">Our Team</a>
+                </li>
+                <li>
+                  <a href="/blog.html" class="hover:text-white transition-colors">Blogs</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Social Links -->
+            <div>
+              <h4 class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6">
+                Social Links
+              </h4>
+              <div class="flex flex-wrap md:grid md:grid-cols-4 gap-4 md:gap-x-[17px] md:gap-y-[19px]">
+                <a href="#" aria-label="Facebook">
+                  <img src="./assets/images/icons/facebook.svg" alt="" />
+                </a>
+                <a href="#" aria-label="Instagram">
+                  <img src="./assets/images/icons/instagram.svg" alt="" />
+                </a>
+                <a href="#" aria-label="Twitter">
+                  <img src="./assets/images/icons/twitter.svg" alt="" />
+                </a>
+                <a href="#" aria-label="TikTok">
+                  <img src="./assets/images/icons/tik-tok.svg" alt="" />
+                </a>
+                <a href="#" aria-label="Truth">
+                  <img src="./assets/images/icons/truth.svg" alt="" />
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                  <img src="./assets/images/icons/linkdin.svg" alt="" />
+                </a>
+                <a href="#" aria-label="YouTube">
+                  <img src="./assets/images/icons/youtube.svg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Legal -->
+            <div>
+              <h4 class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6">
+                Legal
+              </h4>
+              <ul class="space-y-3 text-base leading-[20px]">
+                <li>
+                  <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Column: App Download Cards -->
+          <div
+            class="lg:col-span-5 xlg:col-span-4 flex flex-col space-y-4 justify-start text-primary-950 max-w-[412px]">
+            <!-- iOS App Card -->
+            <div
+              class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all">
+              <div class="flex flex-col gap-[15px]">
+                <div class="shrink-0">
+                  <img src="./assets/images/icons/footer-apple.svg" alt="" />
+                </div>
+
+                <div class="flex flex-col gap-[3px]">
+                  <h5 class="text-base font-bold">
+                    Download our app now for free
+                  </h5>
+                  <p class="text-[12px] leading-tight">
+                    Scan the QR code or use the button below to download our
+                    iOS app.
+                  </p>
+                </div>
+              </div>
+              <!-- Dummy QR Code -->
+              <div class="w-[93px] h-[93px] shrink-0 flex items-center justify-center">
+                <img src="./assets/images/icons/footer-apple-qr.svg" alt="iOS QR Code"
+                  class="w-full h-full object-contain" />
+              </div>
+            </div>
+
+            <!-- Android App Card -->
+            <div
+              class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all">
+              <div class="flex flex-col gap-[15px]">
+                <div class="shrink-0">
+                  <img src="./assets/images/icons/footer-anroid.svg" alt="" />
+                </div>
+
+                <div class="flex flex-col gap-[3px]">
+                  <h5 class="text-base font-bold">
+                    Download our app now for free
+                  </h5>
+                  <p class="text-[12px] leading-tight">
+                    Scan the QR code or use the button below to download our
+                    Android app.
+                  </p>
+                </div>
+              </div>
+              <!-- Dummy QR Code -->
+              <div class="w-[93px] h-[93px] shrink-0 flex items-center justify-center">
+                <img src="./assets/images/icons/footer-anroid-qr.svg" alt="Anroid QR Code"
+                  class="w-full h-full object-contain" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider divider-up"></div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+
 </html>

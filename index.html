@@ -1,1195 +1,758 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quick News Global</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind-config.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick News Global</title>
 
-  <body class="font-body text-white antialiased">
-    <!-- ================= NAVBAR ================= -->
-    <div
-      class="relative min-h-screen overflow-hidden bg-[url('./assets/images/home/hero-banner-bg.svg')] bg-no-repeat bg-cover"
-      style="background-position: bottom left"
-    >
-      <header class="pt-4 md:pt-6 lg:pt-10 relative z-50">
-        <div class="container mx-auto px-4">
-          <nav
-            class="flex items-center justify-between gap-[24px] xl:gap-[40px] rounded-[24px] border border-solid border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.06)] px-6 py-[19px] backdrop-blur-[24.7px] relative"
-          >
-            <!-- Logo -->
-            <a href="./" class="shrink-0">
-              <img
-                src="./assets/images/logos/quick-news.svg"
-                alt="Quick News"
-              />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind-config.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-body text-white antialiased">
+  <!-- ================= NAVBAR ================= -->
+  <div
+    class="relative min-h-screen overflow-hidden bg-[url('./assets/images/home/hero-banner-bg.png')] bg-no-repeat bg-cover">
+    <header class="pt-4 md:pt-6 lg:pt-10 relative z-50">
+      <div class="container mx-auto px-4">
+        <nav
+          class="flex items-center justify-between gap-[24px] xl:gap-[40px] rounded-[24px] border border-solid border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.06)] px-6 py-[19px] backdrop-blur-[24.7px] relative">
+          <!-- Logo -->
+          <a href="./" class="shrink-0">
+            <img src="./assets/images/logos/quick-news.svg" alt="Quick News" />
+          </a>
+
+          <!-- Desktop Navigation Menu -->
+          <div class="flex-1 hidden lg:flex items-center justify-between">
+            <ul class="flex items-center gap-5 xl:gap-10 font-bold text-sm">
+              <li>
+                <a href="./"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Home</a>
+              </li>
+              <li>
+                <a href="/quick-verify.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Verify AI</a>
+              </li>
+              <li>
+                <a href="/about-us.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Our Vision</a>
+              </li>
+              <li>
+                <a href="/partnership.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Partnership</a>
+              </li>
+              <li>
+                <a href="/invest.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Invest</a>
+              </li>
+              <li>
+                <a href="/donate-now.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Donate</a>
+              </li>
+              <li>
+                <a href="/our-team.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Our Team</a>
+              </li>
+              <li>
+                <a href="/blog.html"
+                  class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors">Blog</a>
+              </li>
+            </ul>
+
+            <a href="#"
+              class="btn btn-secondary shadow-custom-glow !px-6 xl:!px-10 flex items-center gap-2 btn-overlay">
+              Download the App
+              <img src="./assets/images/icons/light-blue-arrow-right.svg" alt="" width="20" height="20" />
             </a>
-
-            <!-- Desktop Navigation Menu -->
-            <div class="flex-1 hidden lg:flex items-center justify-between">
-              <ul class="flex items-center gap-5 xl:gap-10 font-bold text-sm">
-                <li>
-                  <a
-                    href="./"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/quick-verify.html"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Verify AI</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/about-us.html"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Our Vision</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/partnership.html"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Partnership</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/invest.html"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Invest</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/donate-now.html"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Donate</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Our Team</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="leading-[20px] text-light-100 hover:text-light-950 py-[10px] transition-colors"
-                    >Blog</a
-                  >
-                </li>
-              </ul>
-
-              <a
-                href="#"
-                class="btn btn-secondary shadow-custom-glow !px-6 xl:!px-10 flex items-center gap-2 btn-overlay"
-              >
-                Download the App
-                <img
-                  src="./assets/images/icons/light-blue-arrow-right.svg"
-                  alt=""
-                  width="20"
-                  height="20"
-                />
-              </a>
-            </div>
-
-            <!-- Hamburger Toggle Button (Visible on Mobile/Tablet < lg) -->
-            <button
-              type="button"
-              id="menu-toggle-btn"
-              aria-label="Toggle navigation"
-              class="lg:hidden p-2 rounded-xl bg-white/10 text-white hover:bg-white/20 focus:outline-none transition-all"
-            >
-              <!-- Hamburger Icon (Default) -->
-              <svg
-                id="hamburger-icon"
-                class="w-6 h-6 stroke-current"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-
-              <!-- Close Cross Icon (Hidden by default) -->
-              <svg
-                id="close-icon"
-                class="w-6 h-6 stroke-current hidden"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-
-            <!-- Mobile Dropdown Menu Drawer -->
-            <div
-              id="mobile-menu"
-              class="hidden absolute top-[calc(100%+12px)] left-0 right-0 w-full rounded-[24px] border border-white/20 bg-[#1c1775]/95 backdrop-blur-2xl p-6 shadow-2xl flex-col gap-5 lg:hidden z-50 transition-all duration-300"
-            >
-              <ul class="flex flex-col gap-3 font-bold text-base text-white">
-                <li>
-                  <a
-                    href="./"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/quick-verify.html"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Verify AI</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/about-us.html"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Our Vision</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/partnership.html"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Partnership</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/invest.html"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Invest</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/donate-now.html"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Donate</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Our Team</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all"
-                    >Blog</a
-                  >
-                </li>
-              </ul>
-
-              <hr class="border-white/15 my-1" />
-
-              <a
-                href="#"
-                class="btn btn-secondary shadow-custom-glow btn-overlay w-full justify-center !py-3 flex items-center gap-2"
-              >
-                Download the App
-                <img
-                  src="./assets/images/icons/light-blue-arrow-right.svg"
-                  alt=""
-                  width="20"
-                  height="20"
-                />
-              </a>
-            </div>
-          </nav>
-        </div>
-      </header>
-
-      <!-- ================= HERO ================= -->
-      <section
-        class="hero-banner pb-[60px] lg:pb-[100px] xlg:pb-[134px] pt-4 md:pt-6 lg:pt-[34px] relative"
-      >
-        <div class="container relative z-[2]">
-          <div class="divider"></div>
-
-          <div
-            class="text-center lg:text-left gap-y-12 pt-[60px] lg:pt-[100px] xlg:pt-[157px]"
-          >
-            <div class="flex flex-col gap-4 items-center lg:items-start">
-              <h1>
-                <span class="block">Know What Matters.</span> In Just 9 Seconds.
-              </h1>
-
-              <p class="text-base leading-[20px] w-full max-w-[575px]">
-                Quick News Global uses AI to transform complex headlines into
-                clear, 45-word intelligence briefs—so you understand what
-                happened, why it matters, and who it affects without endless
-                scrolling.
-              </p>
-
-              <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-                <a href="#" class="btn shadow-custom-black btn-overlay-primary"
-                  >Download the App</a
-                >
-                <a href="#" class="btn btn-outline">How it Works</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <img
-          src="./assets/images/home/hero-moibles.png"
-          alt=""
-          width="723"
-          height="509"
-          class="static mx-auto mt-[48px] lg:m-0 lg:absolute lg:top-[calc(50%_+_10px)] lg:-translate-y-1/2 lg:right-[20px] xlg:right-[50px] w-full md:max-w-[55vw] lg:max-w-[42vw] xlg:max-w-[46vw] 1xl:max-w-[45.20vw] h-[auto]"
-        />
-      </section>
-
-      <!-- ================= NEWS STRIP ================= -->
-      <section class="pb-[60px] lg:pb-[83px]">
-        <div class="container relative z-[2]">
-          <div class="relative">
-            <div class="divider plain-divider"></div>
-            <div
-              class="absolute top-0 left-0 w-[24px] h-[1px] bg-light-950"
-            ></div>
           </div>
 
-          <div
-            class="grid gap-4 xl:gap-6 xl:gap-10 pt-8 md:grid-cols-2 lg:grid-cols-4"
-          >
-            <div class="flex flex-col gap-4">
-              <h4
-                class="text-[18px] xl:text-[20px] font-bold leading-[20px] xl:leading-[24px]"
-              >
-                Global Manufacturers Increase Investment in AI
-              </h4>
-            </div>
+          <!-- Hamburger Toggle Button (Visible on Mobile/Tablet < lg) -->
+          <button type="button" id="menu-toggle-btn" aria-label="Toggle navigation"
+            class="lg:hidden p-2 rounded-xl bg-white/10 text-white hover:bg-white/20 focus:outline-none transition-all">
+            <!-- Hamburger Icon (Default) -->
+            <svg id="hamburger-icon" class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
 
-            <div class="flex flex-col gap-4">
-              <h4
-                class="text-[18px] xl:text-[20px] font-bold leading-[20px] xl:leading-[24px]]"
-              >
-                Global Markets Face Growing Concerns Over Inflation
-              </h4>
-            </div>
+            <!-- Close Cross Icon (Hidden by default) -->
+            <svg id="close-icon" class="w-6 h-6 stroke-current hidden" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
 
-            <div class="flex flex-col gap-4">
-              <h4
-                class="text-[18px] xl:text-[20px] font-bold leading-[20px] xl:leading-[24px]]"
-              >
-                AI and Digital Health Are Reshaping Modern Healthcare
-              </h4>
-            </div>
+          <!-- Mobile Dropdown Menu Drawer -->
+          <div id="mobile-menu"
+            class="hidden absolute top-[calc(100%+12px)] left-0 right-0 w-full rounded-[24px] border border-white/20 bg-[#1c1775]/95 backdrop-blur-2xl p-6 shadow-2xl flex-col gap-5 lg:hidden z-50 transition-all duration-300">
+            <ul class="flex flex-col gap-3 font-bold text-base text-white">
+              <li>
+                <a href="./"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Home</a>
+              </li>
+              <li>
+                <a href="/quick-verify.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Verify
+                  AI</a>
+              </li>
+              <li>
+                <a href="/about-us.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Our
+                  Vision</a>
+              </li>
+              <li>
+                <a href="/partnership.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Partnership</a>
+              </li>
+              <li>
+                <a href="/invest.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Invest</a>
+              </li>
+              <li>
+                <a href="/donate-now.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Donate</a>
+              </li>
+              <li>
+                <a href="/our-team.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Our
+                  Team</a>
+              </li>
+              <li>
+                <a href="/blog.html"
+                  class="block py-2 px-3 rounded-lg hover:bg-white/10 text-light-100 hover:text-white transition-all">Blog</a>
+              </li>
+            </ul>
 
-            <div class="flex flex-col gap-4 relative">
-              <div
-                class="absolute top-[-33px] left-0 w-full h-[1px] bg-light-950 hidden lg:block"
-              ></div>
-              <h4
-                class="text-[18px] xl:text-[20px] font-bold leading-[20px] xl:leading-[24px]]"
-              >
-                AI Data Centers Drive New Wave of Chip Innovation
-              </h4>
-              <p class="text-base leading-[20px] text-light-900 font-normal">
-                The global AI boom is creating unprecedented demand for more
-                powerful and energy-efficient computing infrastructure. A new
-                generation of chip startups is attracting major investment as
-                companies look for ways to reduce the cost and power consumption
-                of AI data centers.
-              </p>
-              <a
-                href="#"
-                class="btn !shadow-[unset] btn-outline w-max !px-[28px] !py-[11px]"
-              >
-                Read more
-                <img
-                  src="./assets/images/icons/light-blue-arrow-right.svg"
-                  alt=""
-                  width="20"
-                  height="20"
-                />
-              </a>
-            </div>
+            <hr class="border-white/15 my-1" />
+
+            <a href="#"
+              class="btn btn-secondary shadow-custom-glow btn-overlay w-full justify-center !py-3 flex items-center gap-2">
+              Download the App
+              <img src="./assets/images/icons/light-blue-arrow-right.svg" alt="" width="20" height="20" />
+            </a>
           </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- ================= DOWNLOAD APP ================= -->
-     <!--  -->
-    <section class="py-[60px] lg:py-[94px] bg-[#EFEFFA] relative">
-      <div
-        class="absolute top-[-16px] left-0 w-full max-w-[416px] h-[auto] z-[1] hidden lg:block"
-      >
-      <img src="./assets/images/home/hero-section-overlauy.png" alt="" />
-       <!-- <img src="./assets/images/home/hero-section-overlay.svg" alt="" /> -->
-        <!-- <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="100%"
-          height="100%"
-          viewBox="0 0 1440 200"
-          fill="none"
-        >
-          <g filter="url(#filter0_f_180_1527)">
-            <rect x="-50" y="50" width="1540" height="100" fill="#EFEFFA" />
-          </g>
-          <defs>
-            <filter
-              id="filter0_f_180_1527"
-              x="-100"
-              y="0"
-              width="1640"
-              height="200"
-              filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
-            >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="BackgroundImageFix"
-                result="shape"
-              />
-              <feGaussianBlur
-                stdDeviation="0"
-                result="effect1_foregroundBlur_180_1527"
-              />
-            </filter>
-          </defs>
-        </svg> -->
+        </nav>
       </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero-banner pb-[60px] lg:pb-[100px] xlg:pb-[134px] pt-4 md:pt-6 lg:pt-[34px] relative">
       <div class="container relative z-[2]">
-        <div class="divider divider-blue mb-10 lg:mb-[80px]"></div>
+        <div class="divider"></div>
 
-        <h2 class="text-primary-800">Download our app now for free</h2>
+        <div class="text-center lg:text-left gap-y-12 pt-[60px] lg:pt-[100px] xlg:pt-[157px]">
+          <div class="flex flex-col gap-4 items-center lg:items-start">
+            <h1>
+              <span class="block">Know What Matters.</span> In Just 9 Seconds.
+            </h1>
 
-        <div class="grid gap-4 md:gap-6 xl:-8 lg:grid-cols-2">
-          <!-- iOS card -->
-          <div
-            class="flex flex-col gap-10 rounded-[24px] py-5 px-6 text-light-900 card-overlay-primary shadow-custom-black"
-          >
-            <div class="flex items-start justify-between">
-              <div class="flex flex-col gap-2 w-full max-w-[382px]">
-                <h3
-                  class="text-[22px] lg:text-[32px] leading-[28px] lg:leading-[38px] font-bold"
-                >
-                  IOS App Download
-                </h3>
-                <p class="text-sm leading-5 font-bold">
-                  Scan the QR code or use the button below to download our iOS
-                  app.
-                </p>
-              </div>
-              <img
-                src="./assets/images/home/apple.png"
-                alt=""
-                width="81"
-                height="100"
-              />
+            <p class="text-base leading-[20px] w-full max-w-[575px]">
+              Quick News Global uses AI to transform complex headlines into
+              clear, 45-word intelligence briefs—so you understand what
+              happened, why it matters, and who it affects without endless
+              scrolling.
+            </p>
+
+            <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+              <a href="#" class="btn shadow-custom-black btn-overlay-primary">Download the App</a>
+              <a href="#" class="btn btn-outline">How it Works</a>
             </div>
-
-            <div class="flex justify-center">
-              <img
-                src="./assets/images/home/white-qr.svg"
-                alt=""
-                width="224"
-                height="224"
-              />
-            </div>
-
-            <a
-              href="#"
-              class="btn btn-primary btn-overlay-primary shadow-custom-black"
-              >Download</a
-            >
-          </div>
-
-          <!-- Android card -->
-          <div
-            class="flex flex-col gap-10 rounded-[24px] py-5 px-6 text-primary-900 bg-[rgba(255,255,255,0.06)] border border-solid border-[rgba(0,0,0,0.10)] relative z-[1] overflow-hidden"
-          >
-             <div
-              class="absolute z-[-1] bottom-[-670px] right-[-255px] rotate-[-128.459deg] rounded-[755px] blur-[100.0378189086914px] bg-[linear-gradient(152deg,#FFF_62.37%,#1909D9_82.7%)] w-[746px] h-[755px]"
-            ></div>
-            <div
-              class="absolute z-[-2] rotate-[-128.459deg] bottom-[-750px] left-[-420px] rounded-[755px] blur-[100.0378189086914px] bg-[linear-gradient(152deg,#FFF_62.37%,#1909D9_82.7%)] w-[746px] h-[755px]"
-            ></div>
-
-            <div class="flex items-start justify-between">
-              <div class="flex flex-col gap-2 w-full max-w-[382px]">
-                <h3
-                  class="text-[22px] lg:text-[32px] leading-[28px] lg:leading-[38px] font-normal"
-                >
-                  Android App Download
-                </h3>
-                <p class="text-sm leading-5 font-bold">
-                  Scan the QR code or use the button below to download our
-                  Android app..
-                </p>
-              </div>
-              <img
-                src="./assets/images/home/anroid.png"
-                alt=""
-                width="81"
-                height="100"
-              />
-            </div>
-
-            <div class="flex justify-center">
-              <img
-                src="./assets/images/home/blue-qr.svg"
-                alt=""
-                width="224"
-                height="224"
-              />
-            </div>
-
-            <a href="#" class="btn btn-overlay shadow-custom-black">Download</a>
           </div>
         </div>
-
-        <div class="divider divider-blue divider-up mt-10 lg:mt-[80px]"></div>
       </div>
+
+      <img src="./assets/images/home/hero-moibles.png" alt="" width="723" height="509"
+        class="static mx-auto mt-[48px] lg:m-0 lg:absolute lg:top-[calc(50%_+_10px)] lg:-translate-y-1/2 lg:right-[20px] xlg:right-[50px] w-full md:max-w-[55vw] lg:max-w-[42vw] xlg:max-w-[46vw] 1xl:max-w-[45.20vw] h-[auto]" />
     </section>
 
-    <section
-      class="relative bg-[url('./assets/images/home/core-feature-bg.png')] bg-no-repeat bg-cover py-[60px] lg:py-[94px] overflow-hidden"
-    >
-      <div
-        class="absolute top-0 left-0 bg-[url('./assets/images/home/core-feature-triangle.png')] w-full max-w-[324px] bg-no-repeat h-[328px] block pointer-events-none hidden md:block"
-      ></div>
-      <div
-        class="absolute bottom-0 left-0 w-full max-w-[95%] h-auto lg:h-[85%]"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1336 1992"
-          fill="none"
-          preserveAspectRatio="none"
-          class="w-full h-full block"
-        >
-          <circle
-            cx="-0.439845"
-            cy="1336.24"
-            r="1290.13"
-            transform="rotate(53.4255 -0.439845 1336.24)"
-            stroke="url(#paint0_linear_59_1132)"
-            stroke-opacity="0.1"
-            stroke-width="72.04"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_59_1132"
-              x1="-0.439819"
-              y1="92.1241"
-              x2="-0.439819"
-              y2="2580.35"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="white" />
-              <stop offset="1" stop-color="#2010F8" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-      <div
-        class="absolute bottom-0 right-0 w-full max-w-[90%] h-auto lg:h-[27%]"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1241 622"
-          fill="none"
-          preserveAspectRatio="none"
-          class="w-full h-full block"
-        >
-          <circle
-            cx="1187.21"
-            cy="1187.21"
-            r="1141.01"
-            transform="rotate(-60.2651 1187.21 1187.21)"
-            stroke="white"
-            stroke-opacity="0.1"
-            stroke-width="82"
-          />
-        </svg>
-      </div>
-      <div
-        class="absolute top-0 left-0 bg-[url('./assets/images/home/core-feature-glow.png')] bg-no-repeat bg-bottom-left w-full md:max-w-[90%] h-[30%]"
-      ></div>
+    <!-- ================= NEWS STRIP ================= -->
+    <section class="pb-[60px] lg:pb-[83px]">
+      <div class="container relative z-[2]">
+        <div class="relative">
+          <div class="divider plain-divider"></div>
+          <div class="absolute top-0 left-0 w-[24px] h-[1px] bg-light-950"></div>
+        </div>
 
-      <div class="relative z-[1] text-light-900 container">
-        <div class="text-center">
-          <h2
-            class="text-3xl sm:text-5xl font-bold tracking-tight text-white drop-shadow-md"
-          >
-            Our Core Features
+        <div class="grid gap-4 xl:gap-6 xl:gap-10 pt-8 md:grid-cols-2 lg:grid-cols-4">
+          <div class="flex flex-col gap-4">
+            <h4 class="text-[18px] xl:text-[20px] font-bold leading-[20px] xl:leading-[24px]">
+              Global Manufacturers Increase Investment in AI
+            </h4>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h4 class="text-[18px] xl:text-[20px] font-bold leading-[20px] xl:leading-[24px]]">
+              Global Markets Face Growing Concerns Over Inflation
+            </h4>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h4 class="text-[18px] xl:text-[20px] font-bold leading-[20px] xl:leading-[24px]]">
+              AI and Digital Health Are Reshaping Modern Healthcare
+            </h4>
+          </div>
+
+          <div class="flex flex-col gap-4 relative">
+            <div class="absolute top-[-33px] left-0 w-full h-[1px] bg-light-950 hidden lg:block"></div>
+            <h4 class="text-[18px] xl:text-[20px] font-bold leading-[20px] xl:leading-[24px]]">
+              AI Data Centers Drive New Wave of Chip Innovation
+            </h4>
+            <p class="text-base leading-[20px] text-light-900 font-normal">
+              The global AI boom is creating unprecedented demand for more
+              powerful and energy-efficient computing infrastructure. A new
+              generation of chip startups is attracting major investment as
+              companies look for ways to reduce the cost and power consumption
+              of AI data centers.
+            </p>
+            <a href="#" class="btn !shadow-[unset] btn-outline w-max !px-[28px] !py-[11px]">
+              Read more
+              <img src="./assets/images/icons/light-blue-arrow-right.svg" alt="" width="20" height="20" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= DOWNLOAD APP ================= -->
+  <section class="py-[60px] lg:py-[94px] bg-[#EFEFFA] relative">
+    <div class="container relative z-[2]">
+      <div class="divider divider-blue mb-10 lg:mb-[80px]"></div>
+
+      <h2 class="text-primary-800">Download our app now for free</h2>
+
+      <div class="grid gap-4 md:gap-6 xl:-8 lg:grid-cols-2">
+        <!-- iOS card -->
+        <div
+          class="flex flex-col gap-10 rounded-[24px] py-5 px-6 text-light-900 card-overlay-primary shadow-custom-black">
+          <div class="flex items-start justify-between">
+            <div class="flex flex-col gap-2 w-full max-w-[382px]">
+              <h3 class="text-[22px] lg:text-[32px] leading-[28px] lg:leading-[38px] font-bold">
+                IOS App Download
+              </h3>
+              <p class="text-sm leading-5 font-bold">
+                Scan the QR code or use the button below to download our iOS
+                app.
+              </p>
+            </div>
+            <img src="./assets/images/home/apple.png" alt="" width="81" height="100" />
+          </div>
+
+          <div class="flex justify-center">
+            <img src="./assets/images/home/white-qr.svg" alt="" width="224" height="224" />
+          </div>
+
+          <a href="#" class="btn btn-primary btn-overlay-primary shadow-custom-black">Download</a>
+        </div>
+
+        <!-- Android card -->
+        <div
+          class="flex flex-col gap-10 rounded-[24px] py-5 px-6 text-primary-900 bg-[rgba(255,255,255,0.06)] border border-solid border-[rgba(0,0,0,0.10)] relative z-[1] overflow-hidden">
+          <div
+            class="absolute z-[-1] bottom-[-670px] right-[-255px] rotate-[-128.459deg] rounded-[755px] blur-[100.0378189086914px] bg-[linear-gradient(152deg,#FFF_62.37%,#1909D9_82.7%)] w-[746px] h-[755px]">
+          </div>
+          <div
+            class="absolute z-[-2] rotate-[-128.459deg] bottom-[-750px] left-[-420px] rounded-[755px] blur-[100.0378189086914px] bg-[linear-gradient(152deg,#FFF_62.37%,#1909D9_82.7%)] w-[746px] h-[755px]">
+          </div>
+
+          <div class="flex items-start justify-between">
+            <div class="flex flex-col gap-2 w-full max-w-[382px]">
+              <h3 class="text-[22px] lg:text-[32px] leading-[28px] lg:leading-[38px] font-normal">
+                Android App Download
+              </h3>
+              <p class="text-sm leading-5 font-bold">
+                Scan the QR code or use the button below to download our
+                Android app..
+              </p>
+            </div>
+            <img src="./assets/images/home/anroid.png" alt="" width="81" height="100" />
+          </div>
+
+          <div class="flex justify-center">
+            <img src="./assets/images/home/blue-qr.svg" alt="" width="224" height="224" />
+          </div>
+
+          <a href="#" class="btn btn-overlay shadow-custom-black">Download</a>
+        </div>
+      </div>
+
+      <div class="divider divider-blue divider-up mt-10 lg:mt-[80px]"></div>
+    </div>
+  </section>
+
+  <section
+    class="relative bg-[url('./assets/images/home/core-feature-bg.png')] bg-no-repeat bg-cover py-[60px] lg:py-[94px] overflow-hidden">
+    <div
+      class="absolute top-0 left-0 bg-[url('./assets/images/home/core-feature-triangle.png')] w-full max-w-[324px] bg-no-repeat h-[328px] block pointer-events-none hidden md:block">
+    </div>
+    <div class="absolute bottom-0 left-0 w-full max-w-[95%] h-auto lg:h-[85%]">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1336 1992" fill="none" preserveAspectRatio="none"
+        class="w-full h-full block">
+        <circle cx="-0.439845" cy="1336.24" r="1290.13" transform="rotate(53.4255 -0.439845 1336.24)"
+          stroke="url(#paint0_linear_59_1132)" stroke-opacity="0.1" stroke-width="72.04" />
+        <defs>
+          <linearGradient id="paint0_linear_59_1132" x1="-0.439819" y1="92.1241" x2="-0.439819" y2="2580.35"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="white" />
+            <stop offset="1" stop-color="#2010F8" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="absolute bottom-0 right-0 w-full max-w-[90%] h-auto lg:h-[27%]">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1241 622" fill="none" preserveAspectRatio="none"
+        class="w-full h-full block">
+        <circle cx="1187.21" cy="1187.21" r="1141.01" transform="rotate(-60.2651 1187.21 1187.21)" stroke="white"
+          stroke-opacity="0.1" stroke-width="82" />
+      </svg>
+    </div>
+    <div
+      class="absolute top-0 left-0 bg-[url('./assets/images/home/core-feature-glow.png')] bg-no-repeat bg-bottom-left w-full md:max-w-[90%] h-[30%]">
+    </div>
+
+    <div class="relative z-[1] text-light-900 container">
+      <div class="text-center">
+        <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white drop-shadow-md">
+          Our Core Features
+        </h2>
+      </div>
+
+      <div class="space-y-6">
+        <!-- ================= FEATURE 1 ================= -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div
+            class="w-full max-w-[90%] md:max-w-[525px] mx-auto lg:ml-0 lg:mr-auto lg:pt-10 flex flex-col gap-4 lg:gap-6 text-center lg:text-left relative">
+            <h3 class="text-2xl md:text-[24px] lg:text-[40px] font-bold leading-[30px] lg:leading-[48px]">
+              AI-Powered real-Time New Verification
+            </h3>
+            <p class="text-base lg:text-[20px] leading-[24px] lg:leading-[36px] font-normal">
+              The global AI boom is creating unprecedented demand for more
+              powerful and energy-efficient computing infrastructure. A new
+              generation of chip startups is attracting major investment as
+              companies look for ways to reduce the cost and power
+              consumptionx of AI data centers.
+            </p>
+            <div>
+              <a href="#" class="btn btn-primary btn-overlay-primary shadow-custom-black !inline-block">
+                Download the App
+              </a>
+            </div>
+          </div>
+
+          <!-- Phone Mockups -->
+          <div class="flex justify-center lg:justify-end items-center">
+            <img src="./assets/images/home/ai-powered-real-time-new-verification.png" alt="" />
+          </div>
+        </div>
+
+        <!-- ================= FEATURE 2 ================= -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Phone Mockup (Left Side) -->
+          <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+            <img src="./assets/images/home/quick-find-magazine.png" alt="" />
+          </div>
+
+          <!-- Text Content (Right Side) -->
+          <div
+            class="order-1 lg:order-2 w-full max-w-[90%] md:max-w-[525px] mx-auto lg:ml-0 lg:mr-auto flex flex-col gap-4 lg:gap-6 text-center lg:text-left">
+            <h3 class="text-2xl md:text-[24px] lg:text-[40px] font-bold leading-[30px] lg:leading-[48px]">
+              Quick Find Magazine
+            </h3>
+            <p class="text-base lg:text-[20px] leading-[24px] lg:leading-[36px] font-normal">
+              The global AI boom is creating unprecedented demand for more
+              powerful and energy-efficient computing infrastructure. A new
+              generation of chip startups is attracting major investment as
+              companies look for ways to reduce the cost and power consumption
+              of AI data centers.
+            </p>
+            <div>
+              <a href="#" class="btn btn-primary btn-overlay-primary shadow-custom-black !inline-block">
+                Download the App
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= FEATURE 3 ================= -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Text Content -->
+          <div
+            class="w-full max-w-[90%] md:max-w-[525px] mx-auto lg:ml-0 lg:mr-auto flex flex-col gap-4 lg:gap-6 text-center lg:text-left">
+            <h3 class="text-2xl md:text-[24px] lg:text-[40px] font-bold leading-[30px] lg:leading-[48px]">
+              Breaking News Guided Summaries in 45 words
+            </h3>
+            <p class="text-base lg:text-[20px] leading-[24px] lg:leading-[36px] font-normal">
+              The global AI boom is creating unprecedented demand for more
+              powerful and energy-efficient computing infrastructure. A new
+              generation of chip startups is attracting major investment as
+              companies look for ways to reduce the cost and power consumption
+              of AI data centers.
+            </p>
+            <div>
+              <a href="#" class="btn btn-primary btn-overlay-primary shadow-custom-black !inline-block">
+                Download the App
+              </a>
+            </div>
+          </div>
+
+          <!-- Dual Phone Mockups -->
+          <div class="flex justify-center lg:justify-end items-center">
+            <img src="./assets/images/home/breaking-news-guided-summaries-in-45-words.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-[60px] lg:py-[94px] !pb-0">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="divider divider-blue mb-10 lg:mb-[80px]"></div>
+
+      <!-- Header with Title & Custom Controls -->
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-primary-800 !mb-0">Hot Global Topics</h2>
+
+        <!-- Custom Owl Navigation Controls -->
+        <div class="flex items-center gap-1">
+          <button type="button" id="owl-prev-btn" aria-label="Previous slide"
+            class="w-[56px] h-[56px] rounded-[12px] btn-overlay-primary shadow-custom-black hover:opacity-50 hidden md:flex items-center justify-center transition-all duration-200">
+            <img src="./assets/images/icons/angle-right.svg" alt="" class="rotate-180" />
+          </button>
+
+          <button type="button" id="owl-next-btn" aria-label="Next slide"
+            class="w-[56px] h-[56px] rounded-[12px] btn-overlay-primary shadow-custom-black hover:opacity-50 hidden md:flex items-center justify-center shadow-md transition-all duration-200">
+            <img src="./assets/images/icons/angle-right.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Owl Carousel Container -->
+    <div class="w-full">
+      <div class="owl-carousel owl-theme hot-topics-carousel">
+        <!-- Card 1 -->
+        <div class="card-item group cursor-pointer shadow-xl rounded-[24px] overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop"
+            alt="Oil & global inflation"
+            class="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center p-4">
+            <h3 class="text-[24px] font-bold leading-[29px]">
+              Oil & global inflation
+            </h3>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-item group cursor-pointer shadow-xl rounded-[24px] overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800&auto=format&fit=crop"
+            alt="Global bond-market pressure"
+            class="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center p-4">
+            <h3 class="text-[24px] font-bold leading-[29px]">
+              Global bond-market pressure
+            </h3>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-item group cursor-pointer shadow-xl rounded-[24px] overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=800&auto=format&fit=crop"
+            alt="Emerging markets volatility"
+            class="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center p-4">
+            <h3 class="text-[24px] font-bold leading-[29px]">
+              Emerging markets volatility
+            </h3>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card-item group cursor-pointer shadow-xl rounded-[24px] overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800&auto=format&fit=crop"
+            alt="AI investment & Adoption"
+            class="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center p-4">
+            <h3 class="text-[24px] font-bold leading-[29px]">
+              AI investment & Adoption
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating "Download the App" Pill -->
+      <div class="flex justify-center relative z-[1]">
+        <a href="#" class="btn btn-overlay shadow-custom-glow">
+          Download the App
+          <img src="./assets/images/icons/light-blue-arrow-right.svg" alt="" width="20" height="20" />
+        </a>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="divider divider-blue divider-up mt-10 lg:mt-[80px]"></div>
+    </div>
+  </section>
+
+  <section class="py-[60px] lg:py-[94px]">
+    <div class="container">
+      <div
+        class="relative rounded-[32px] bg-[url('./assets/images/home/why-we-choose-us.png')] bg-no-repeat bg-cover px-6 py-10 md:p-12 lg:p-16 overflow-hidden shadow-2xl flex flex-col lg:flex-row lg:items-center justify-between gap-4 md:gap-6 xl:gap-10">
+        <!-- Left Content Section -->
+        <div class="flex flex-col items-center lg:items-start w-full lg:max-w-[391px] gap-4 lg:gap-[34px]">
+          <!-- 5 Yellow Star Ratings -->
+          <div class="flex items-center gap-2 lg:gap-4">
+            <img src="./assets/images/icons/rating-star.svg" alt="" width="37" height="37"
+              class="w-full max-w-[20px] lg:max-w-[37px] h-auto" />
+            <img src="./assets/images/icons/rating-star.svg" alt="" width="37" height="37"
+              class="w-full max-w-[20px] lg:max-w-[37px] h-auto" />
+            <img src="./assets/images/icons/rating-star.svg" alt="" width="37" height="37"
+              class="w-full max-w-[30px] lg:max-w-[37px] h-auto" />
+            <img src="./assets/images/icons/rating-star.svg" alt="" width="37" height="37"
+              class="w-full max-w-[20px] lg:max-w-[37px] h-auto" />
+            <img src="./assets/images/icons/rating-star.svg" alt="" width="37" height="37"
+              class="w-full max-w-[20px] lg:max-w-[37px] h-auto" />
+          </div>
+
+          <!-- Heading -->
+          <h2 class="xl:!text-[39px] xl:!font-black xl:!leading-[54px] !mb-0 text-center lg:text-left">
+            Why People <span class="block">Choose Us</span>
           </h2>
         </div>
 
-        <div class="space-y-6">
-          <!-- ================= FEATURE 1 ================= -->
+        <!-- Right Floating Glass Pill Badges -->
+        <div class="flex flex-col items-end space-y-4 w-full lg:flex-1 relative xlg:min-h-[353px]">
+          <!-- Badge 1 -->
           <div
-            class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
-          >
-            <div
-              class="w-full max-w-[90%] md:max-w-[525px] mx-auto lg:ml-0 lg:mr-auto lg:pt-10 flex flex-col gap-4 lg:gap-6 text-center lg:text-left relative"
-            >
-              <h3
-                class="text-2xl md:text-[24px] lg:text-[40px] font-bold leading-[30px] lg:leading-[48px]"
-              >
-                AI-Powered real-Time New Verification
-              </h3>
-              <p
-                class="text-base lg:text-[20px] leading-[24px] lg:leading-[36px] font-normal"
-              >
-                The global AI boom is creating unprecedented demand for more
-                powerful and energy-efficient computing infrastructure. A new
-                generation of chip startups is attracting major investment as
-                companies look for ways to reduce the cost and power
-                consumptionx of AI data centers.
-              </p>
-              <div>
-                <a
-                  href="#"
-                  class="btn btn-primary btn-overlay-primary shadow-custom-black !inline-block"
-                >
-                  Download the App
-                </a>
-              </div>
-            </div>
-
-            <!-- Phone Mockups -->
-            <div class="flex justify-center lg:justify-end items-center">
-              <img
-                src="./assets/images/home/ai-powered-real-time-new-verification.png"
-                alt=""
-              />
-            </div>
+            class="btn btn-overlay-primary w-full xl:max-w-[395px] !justify-start !p-4 !shadow-custom-black transition-all duration-300 static xlg:absolute right-[calc((100%_-_395px))] 2xl:right-[calc((100%_-_395px)_-_18%)] top-[calc(16px)]">
+            <!-- AI Icon -->
+            <img src="./assets/images/icons/ai.svg" alt="" width="36" height="36" />
+            <div class="h-9 w-[1px] bg-light-950"></div>
+            <span class="text-base md:text-[18px] lg:text-[23px] font-bold leading-[24px] lg:leading-[32px]">AI-Powered
+              Fact Checking</span>
           </div>
 
-          <!-- ================= FEATURE 2 ================= -->
+          <!-- Badge 2 -->
           <div
-            class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
-          >
-            <!-- Phone Mockup (Left Side) -->
-            <div
-              class="order-2 lg:order-1 flex justify-center lg:justify-start"
-            >
-              <img src="./assets/images/home/quick-find-magazine.png" alt="" />
-            </div>
-
-            <!-- Text Content (Right Side) -->
-            <div
-              class="order-1 lg:order-2 w-full max-w-[90%] md:max-w-[525px] mx-auto lg:ml-0 lg:mr-auto flex flex-col gap-4 lg:gap-6 text-center lg:text-left"
-            >
-              <h3
-                class="text-2xl md:text-[24px] lg:text-[40px] font-bold leading-[30px] lg:leading-[48px]"
-              >
-                Quick Find Magazine
-              </h3>
-              <p
-                class="text-base lg:text-[20px] leading-[24px] lg:leading-[36px] font-normal"
-              >
-                The global AI boom is creating unprecedented demand for more
-                powerful and energy-efficient computing infrastructure. A new
-                generation of chip startups is attracting major investment as
-                companies look for ways to reduce the cost and power consumption
-                of AI data centers.
-              </p>
-              <div>
-                <a
-                  href="#"
-                  class="btn btn-primary btn-overlay-primary shadow-custom-black !inline-block"
-                >
-                  Download the App
-                </a>
-              </div>
-            </div>
+            class="btn btn-overlay-primary w-full xl:max-w-[406px] !justify-start !p-4 !shadow-custom-black transition-all duration-300 static right-[calc((100%_-_406px)_-_8%)] xlg:absolute 2xl:right-[calc((100%_-_406px)_-_27%)] top-[calc(84px*1)]">
+            <!-- AI Icon -->
+            <img src="./assets/images/icons/personalize-news.svg" alt="" width="36" height="36" />
+            <div class="h-9 w-[1px] bg-light-950"></div>
+            <span
+              class="text-base md:text-[18px] lg:text-[23px] font-bold leading-[24px] lg:leading-[32px]">Personalised
+              News
+            </span>
           </div>
 
-          <!-- ================= FEATURE 3 ================= -->
+          <!-- Badge 3 -->
           <div
-            class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
-          >
-            <!-- Text Content -->
-            <div
-              class="w-full max-w-[90%] md:max-w-[525px] mx-auto lg:ml-0 lg:mr-auto flex flex-col gap-4 lg:gap-6 text-center lg:text-left"
-            >
-              <h3
-                class="text-2xl md:text-[24px] lg:text-[40px] font-bold leading-[30px] lg:leading-[48px]"
-              >
-                Breaking News Guided Summaries in 45 words
-              </h3>
-              <p
-                class="text-base lg:text-[20px] leading-[24px] lg:leading-[36px] font-normal"
-              >
-                The global AI boom is creating unprecedented demand for more
-                powerful and energy-efficient computing infrastructure. A new
-                generation of chip startups is attracting major investment as
-                companies look for ways to reduce the cost and power consumption
-                of AI data centers.
-              </p>
-              <div>
-                <a
-                  href="#"
-                  class="btn btn-primary btn-overlay-primary shadow-custom-black !inline-block"
-                >
-                  Download the App
-                </a>
-              </div>
-            </div>
+            class="btn btn-overlay-primary w-full xl:max-w-[406px] !justify-start !p-4 !shadow-custom-black transition-all duration-300 static xlg:absolute right-[calc((100%_-_406px)_-_17%)] 2xl:right-[calc((100%_-_406px)_-_37%)] top-[calc(84px*2)]">
+            <!-- AI Icon -->
+            <img src="./assets/images/icons/stay-update.svg" alt="" width="36" height="36" />
+            <div class="h-9 w-[1px] bg-light-950"></div>
+            <span class="text-base md:text-[18px] lg:text-[23px] font-bold leading-[24px] lg:leading-[32px]">Stay
+              Updated inMinutes</span>
+          </div>
 
-            <!-- Dual Phone Mockups -->
-            <div class="flex justify-center lg:justify-end items-center">
-              <img
-                src="./assets/images/home/breaking-news-guided-summaries-in-45-words.png"
-                alt=""
-              />
-            </div>
+          <!-- Badge 4 -->
+          <div
+            class="btn btn-overlay-primary w-full xl:max-w-[406px] !justify-start !p-4 !shadow-custom-black transition-all duration-300 static xlg:absolute right-[0] top-[calc(84px*3)]">
+            <!-- AI Icon -->
+            <img src="./assets/images/icons/trusted-source.svg" alt="" width="36" height="36" />
+            <div class="h-9 w-[1px] bg-light-950"></div>
+            <span class="text-base md:text-[18px] lg:text-[23px] font-bold leading-[24px] lg:leading-[32px]">Trusted
+              Sources, One App</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="py-[60px] lg:py-[94px] !pb-0">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="divider divider-blue mb-10 lg:mb-[80px]"></div>
+  <footer class="py-[50px] bg-[url('./assets/images/home/footer-bg.png')] bg-no-repeat bg-cover text-light-950">
+    <div class="container">
+      <div class="divider"></div>
 
-        <!-- Header with Title & Custom Controls -->
-        <div class="flex items-center justify-between mb-8">
-          <h2 class="text-primary-800 !mb-0">Hot Global Topics</h2>
-
-          <!-- Custom Owl Navigation Controls -->
-          <div class="flex items-center gap-1">
-            <button
-              type="button"
-              id="owl-prev-btn"
-              aria-label="Previous slide"
-              class="w-[56px] h-[56px] rounded-[12px] btn-overlay-primary shadow-custom-black hover:opacity-50 hidden md:flex items-center justify-center transition-all duration-200"
-            >
-              <img
-                src="./assets/images/icons/angle-right.svg"
-                alt=""
-                class="rotate-180"
-              />
-            </button>
-
-            <button
-              type="button"
-              id="owl-next-btn"
-              aria-label="Next slide"
-              class="w-[56px] h-[56px] rounded-[12px] btn-overlay-primary shadow-custom-black hover:opacity-50 hidden md:flex items-center justify-center shadow-md transition-all duration-200"
-            >
-              <img src="./assets/images/icons/angle-right.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Owl Carousel Container -->
-      <div class="w-full">
-        <div class="owl-carousel owl-theme hot-topics-carousel">
-          <!-- Card 1 -->
-          <div
-            class="card-item group cursor-pointer shadow-xl rounded-[24px] overflow-hidden relative"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop"
-              alt="Oil & global inflation"
-              class="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-105"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"
-            ></div>
-            <div class="absolute inset-0 flex items-center justify-center p-4">
-              <h3 class="text-[24px] font-bold leading-[29px]">
-                Oil & global inflation
-              </h3>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div
-            class="card-item group cursor-pointer shadow-xl rounded-[24px] overflow-hidden relative"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800&auto=format&fit=crop"
-              alt="Global bond-market pressure"
-              class="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-105"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"
-            ></div>
-            <div class="absolute inset-0 flex items-center justify-center p-4">
-              <h3 class="text-[24px] font-bold leading-[29px]">
-                Global bond-market pressure
-              </h3>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div
-            class="card-item group cursor-pointer shadow-xl rounded-[24px] overflow-hidden relative"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=800&auto=format&fit=crop"
-              alt="Emerging markets volatility"
-              class="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-105"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"
-            ></div>
-            <div class="absolute inset-0 flex items-center justify-center p-4">
-              <h3 class="text-[24px] font-bold leading-[29px]">
-                Emerging markets volatility
-              </h3>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div
-            class="card-item group cursor-pointer shadow-xl rounded-[24px] overflow-hidden relative"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800&auto=format&fit=crop"
-              alt="AI investment & Adoption"
-              class="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-105"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"
-            ></div>
-            <div class="absolute inset-0 flex items-center justify-center p-4">
-              <h3 class="text-[24px] font-bold leading-[29px]">
-                AI investment & Adoption
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Floating "Download the App" Pill -->
-        <div class="flex justify-center relative z-[1]">
-          <a href="#" class="btn btn-overlay shadow-custom-glow">
-            Download the App
-            <img
-              src="./assets/images/icons/light-blue-arrow-right.svg"
-              alt=""
-              width="20"
-              height="20"
-            />
-          </a>
-        </div>
-      </div>
-
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="divider divider-blue divider-up mt-10 lg:mt-[80px]"></div>
-      </div>
-    </section>
-
-    <section class="py-[60px] lg:py-[94px]">
-      <div class="container">
-        <div
-          class="relative rounded-[32px] bg-[url('./assets/images/home/why-we-choose-us.png')] bg-no-repeat bg-cover px-6 py-10 md:p-12 lg:p-16 overflow-hidden shadow-2xl flex flex-col lg:flex-row lg:items-center justify-between gap-4 md:gap-6 xl:gap-10"
-        >
-          <!-- Left Content Section -->
-          <div
-            class="flex flex-col items-center lg:items-start w-full lg:max-w-[391px] gap-4 lg:gap-[34px]"
-          >
-            <!-- 5 Yellow Star Ratings -->
-            <div class="flex items-center gap-2 lg:gap-4">
-              <img
-                src="./assets/images/icons/rating-star.svg"
-                alt=""
-                width="37"
-                height="37"
-                class="w-full max-w-[20px] lg:max-w-[37px] h-auto"
-              />
-              <img
-                src="./assets/images/icons/rating-star.svg"
-                alt=""
-                width="37"
-                height="37"
-                class="w-full max-w-[20px] lg:max-w-[37px] h-auto"
-              />
-              <img
-                src="./assets/images/icons/rating-star.svg"
-                alt=""
-                width="37"
-                height="37"
-                class="w-full max-w-[30px] lg:max-w-[37px] h-auto"
-              />
-              <img
-                src="./assets/images/icons/rating-star.svg"
-                alt=""
-                width="37"
-                height="37"
-                class="w-full max-w-[20px] lg:max-w-[37px] h-auto"
-              />
-              <img
-                src="./assets/images/icons/rating-star.svg"
-                alt=""
-                width="37"
-                height="37"
-                class="w-full max-w-[20px] lg:max-w-[37px] h-auto"
-              />
-            </div>
-
-            <!-- Heading -->
-            <h2
-              class="xl:!text-[39px] xl:!font-black xl:!leading-[54px] !mb-0 text-center lg:text-left"
-            >
-              Why People <span class="block">Choose Us</span>
-            </h2>
-          </div>
-
-          <!-- Right Floating Glass Pill Badges -->
-          <div
-            class="flex flex-col items-end space-y-4 w-full lg:flex-1 relative xlg:min-h-[353px]"
-          >
-            <!-- Badge 1 -->
-            <div
-              class="btn btn-overlay-primary w-full xl:max-w-[395px] !justify-start !p-4 !shadow-custom-black transition-all duration-300 static xlg:absolute right-[calc((100%_-_395px))] 2xl:right-[calc((100%_-_395px)_-_18%)] top-[calc(16px)]"
-            >
-              <!-- AI Icon -->
-              <img
-                src="./assets/images/icons/ai.svg"
-                alt=""
-                width="36"
-                height="36"
-              />
-              <div class="h-9 w-[1px] bg-light-950"></div>
-              <span
-                class="text-base md:text-[18px] lg:text-[23px] font-bold leading-[24px] lg:leading-[32px]"
-                >AI-Powered Fact Checking</span
-              >
-            </div>
-
-            <!-- Badge 2 -->
-            <div
-              class="btn btn-overlay-primary w-full xl:max-w-[406px] !justify-start !p-4 !shadow-custom-black transition-all duration-300 static right-[calc((100%_-_406px)_-_8%)] xlg:absolute 2xl:right-[calc((100%_-_406px)_-_27%)] top-[calc(84px*1)]"
-            >
-              <!-- AI Icon -->
-              <img
-                src="./assets/images/icons/personalize-news.svg"
-                alt=""
-                width="36"
-                height="36"
-              />
-              <div class="h-9 w-[1px] bg-light-950"></div>
-              <span
-                class="text-base md:text-[18px] lg:text-[23px] font-bold leading-[24px] lg:leading-[32px]"
-                >Personalised News
-              </span>
-            </div>
-
-            <!-- Badge 3 -->
-            <div
-              class="btn btn-overlay-primary w-full xl:max-w-[406px] !justify-start !p-4 !shadow-custom-black transition-all duration-300 static xlg:absolute right-[calc((100%_-_406px)_-_17%)] 2xl:right-[calc((100%_-_406px)_-_37%)] top-[calc(84px*2)]"
-            >
-              <!-- AI Icon -->
-              <img
-                src="./assets/images/icons/stay-update.svg"
-                alt=""
-                width="36"
-                height="36"
-              />
-              <div class="h-9 w-[1px] bg-light-950"></div>
-              <span
-                class="text-base md:text-[18px] lg:text-[23px] font-bold leading-[24px] lg:leading-[32px]"
-                >Stay Updated inMinutes</span
-              >
-            </div>
-
-            <!-- Badge 4 -->
-            <div
-              class="btn btn-overlay-primary w-full xl:max-w-[406px] !justify-start !p-4 !shadow-custom-black transition-all duration-300 static xlg:absolute right-[0] top-[calc(84px*3)]"
-            >
-              <!-- AI Icon -->
-              <img
-                src="./assets/images/icons/trusted-source.svg"
-                alt=""
-                width="36"
-                height="36"
-              />
-              <div class="h-9 w-[1px] bg-light-950"></div>
-              <span
-                class="text-base md:text-[18px] lg:text-[23px] font-bold leading-[24px] lg:leading-[32px]"
-                >Trusted Sources, One App</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer
-      class="py-[50px] bg-[url('./assets/images/home/footer-bg.png')] bg-no-repeat bg-cover text-light-950"
-    >
-      <div class="container">
-        <div class="divider"></div>
-
-        <!-- Main Footer Content -->
-        <div class="py-12 lg:py-16">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-9">
-            <!-- Left Column: Branding & Description -->
-            <div class="lg:col-span-full flex flex-col justify-between">
-              <div>
-                <!-- Brand Icon / Logo -->
-                <a href="/" class="inline-block">
-                  <div
-                    class="w-10 h-10 rounded-full bg-light-1950 border border-white/20 flex items-center justify-center"
-                  >
-                    <img
-                      src="./assets/images/logos/quick-news.svg"
-                      alt="Quick News Global"
-                      class="w-6 h-6"
-                    />
-                  </div>
-                </a>
-
-                <!-- Heading -->
-                <h2 class="!mb-6">Quick News Global</h2>
-
-                <!-- Paragraph -->
-                <p class="text-base leading-[20px] max-w-[445px]">
-                  Quick News Global's (AI) tells you everything you actually
-                  need to know including how the story is being framed. Global
-                  events, local stories, and everything in between, delivered in
-                  45 words. Know the headline, but also know the feeling behind
-                  it.
-                  <a
-                    href="#"
-                    class="underline text-white hover:text-primary-400 transition-colors"
-                    >Download now</a
-                  >
-                  to stay informed and united.
-                </p>
-              </div>
-            </div>
-
-            <!-- Middle Column: Navigation Columns (Menu, Social, Legal) -->
-            <div
-              class="lg:col-span-7 xlg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-[90px] w-full max-w-[752px]"
-            >
-              <!-- Menu Links -->
-              <div>
-                <h4
-                  class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6"
-                >
-                  Menu Links
-                </h4>
-                <ul class="space-y-3 text-base leading-[20px]">
-                  <li>
-                    <a href="./" class="hover:text-white transition-colors"
-                      >Home</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/about-us.html"
-                      class="hover:text-white transition-colors"
-                      >Our Vision</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/partnership.html"
-                      class="hover:text-white transition-colors"
-                      >Partnerships</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/invest.html"
-                      class="hover:text-white transition-colors"
-                      >Invest</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/donate-now.html"
-                      class="hover:text-white transition-colors"
-                      >Donate</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-white transition-colors"
-                      >Our Team</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-white transition-colors"
-                      >Blogs</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Social Links -->
-              <div>
-                <h4
-                  class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6"
-                >
-                  Social Links
-                </h4>
+      <!-- Main Footer Content -->
+      <div class="py-12 lg:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-9">
+          <!-- Left Column: Branding & Description -->
+          <div class="lg:col-span-full flex flex-col justify-between">
+            <div>
+              <!-- Brand Icon / Logo -->
+              <a href="/" class="inline-block">
                 <div
-                  class="flex flex-wrap md:grid md:grid-cols-4 gap-4 md:gap-x-[17px] md:gap-y-[19px]"
-                >
-                  <a href="#" aria-label="Facebook">
-                    <img src="./assets/images/icons/facebook.svg" alt="" />
-                  </a>
-                  <a href="#" aria-label="Instagram">
-                    <img src="./assets/images/icons/instagram.svg" alt="" />
-                  </a>
-                  <a href="#" aria-label="Twitter">
-                    <img src="./assets/images/icons/twitter.svg" alt="" />
-                  </a>
-                  <a href="#" aria-label="TikTok">
-                    <img src="./assets/images/icons/tik-tok.svg" alt="" />
-                  </a>
-                  <a href="#" aria-label="Truth">
-                    <img src="./assets/images/icons/truth.svg" alt="" />
-                  </a>
-                  <a href="#" aria-label="LinkedIn">
-                    <img src="./assets/images/icons/linkdin.svg" alt="" />
-                  </a>
-                  <a href="#" aria-label="YouTube">
-                    <img src="./assets/images/icons/youtube.svg" alt="" />
-                  </a>
+                  class="w-10 h-10 rounded-full bg-light-1950 border border-white/20 flex items-center justify-center">
+                  <img src="./assets/images/logos/quick-news.svg" alt="Quick News Global" class="w-6 h-6" />
                 </div>
-              </div>
+              </a>
 
-              <!-- Legal -->
-              <div>
-                <h4
-                  class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6"
-                >
-                  Legal
-                </h4>
-                <ul class="space-y-3 text-base leading-[20px]">
-                  <li>
-                    <a href="#" class="hover:text-white transition-colors"
-                      >Privacy Policy</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-white transition-colors"
-                      >Terms of Service</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-white transition-colors"
-                      >Editorial Guidelines</a
-                    >
-                  </li>
-                </ul>
+              <!-- Heading -->
+              <h2 class="!mb-6">Quick News Global</h2>
+
+              <!-- Paragraph -->
+              <p class="text-base leading-[20px] max-w-[445px]">
+                Quick News Global's (AI) tells you everything you actually
+                need to know including how the story is being framed. Global
+                events, local stories, and everything in between, delivered in
+                45 words. Know the headline, but also know the feeling behind
+                it.
+                <a href="#" class="underline text-white hover:text-primary-400 transition-colors">Download now</a>
+                to stay informed and united.
+              </p>
+            </div>
+          </div>
+
+          <!-- Middle Column: Navigation Columns (Menu, Social, Legal) -->
+          <div
+            class="lg:col-span-7 xlg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-[90px] w-full max-w-[752px]">
+            <!-- Menu Links -->
+            <div>
+              <h4 class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6">
+                Menu Links
+              </h4>
+              <ul class="space-y-3 text-base leading-[20px]">
+                <li>
+                  <a href="./" class="hover:text-white transition-colors">Home</a>
+                </li>
+                <li>
+                  <a href="/about-us.html" class="hover:text-white transition-colors">Our Vision</a>
+                </li>
+                <li>
+                  <a href="/partnership.html" class="hover:text-white transition-colors">Partnerships</a>
+                </li>
+                <li>
+                  <a href="/invest.html" class="hover:text-white transition-colors">Invest</a>
+                </li>
+                <li>
+                  <a href="/donate-now.html" class="hover:text-white transition-colors">Donate</a>
+                </li>
+                <li>
+                  <a href="/our-team.html" class="hover:text-white transition-colors">Our Team</a>
+                </li>
+                <li>
+                  <a href="/blog.html" class="hover:text-white transition-colors">Blogs</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Social Links -->
+            <div>
+              <h4 class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6">
+                Social Links
+              </h4>
+              <div class="flex flex-wrap md:grid md:grid-cols-4 gap-4 md:gap-x-[17px] md:gap-y-[19px]">
+                <a href="#" aria-label="Facebook">
+                  <img src="./assets/images/icons/facebook.svg" alt="" />
+                </a>
+                <a href="#" aria-label="Instagram">
+                  <img src="./assets/images/icons/instagram.svg" alt="" />
+                </a>
+                <a href="#" aria-label="Twitter">
+                  <img src="./assets/images/icons/twitter.svg" alt="" />
+                </a>
+                <a href="#" aria-label="TikTok">
+                  <img src="./assets/images/icons/tik-tok.svg" alt="" />
+                </a>
+                <a href="#" aria-label="Truth">
+                  <img src="./assets/images/icons/truth.svg" alt="" />
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                  <img src="./assets/images/icons/linkdin.svg" alt="" />
+                </a>
+                <a href="#" aria-label="YouTube">
+                  <img src="./assets/images/icons/youtube.svg" alt="" />
+                </a>
               </div>
             </div>
 
-            <!-- Right Column: App Download Cards -->
-            <div
-              class="lg:col-span-5 xlg:col-span-4 flex flex-col space-y-4 justify-start text-primary-950 max-w-[412px]"
-            >
-              <!-- iOS App Card -->
-              <div
-                class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all"
-              >
-                <div class="flex flex-col gap-[15px]">
-                  <div class="shrink-0">
-                    <img src="./assets/images/icons/footer-apple.svg" alt="" />
-                  </div>
+            <!-- Legal -->
+            <div>
+              <h4 class="text-[18px] leading-[20px] tracking-[0.21px]font-medium mb-6">
+                Legal
+              </h4>
+              <ul class="space-y-3 text-base leading-[20px]">
+                <li>
+                  <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors">Editorial Guidelines</a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-                  <div class="flex flex-col gap-[3px]">
-                    <h5 class="text-base font-bold">
-                      Download our app now for free
-                    </h5>
-                    <p class="text-[12px] leading-tight">
-                      Scan the QR code or use the button below to download our
-                      iOS app.
-                    </p>
-                  </div>
+          <!-- Right Column: App Download Cards -->
+          <div
+            class="lg:col-span-5 xlg:col-span-4 flex flex-col space-y-4 justify-start text-primary-950 max-w-[412px]">
+            <!-- iOS App Card -->
+            <div
+              class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all">
+              <div class="flex flex-col gap-[15px]">
+                <div class="shrink-0">
+                  <img src="./assets/images/icons/footer-apple.svg" alt="" />
                 </div>
-                <!-- Dummy QR Code -->
-                <div
-                  class="w-[93px] h-[93px] shrink-0 flex items-center justify-center"
-                >
-                  <img
-                    src="./assets/images/icons/footer-apple-qr.svg"
-                    alt="iOS QR Code"
-                    class="w-full h-full object-contain"
-                  />
+
+                <div class="flex flex-col gap-[3px]">
+                  <h5 class="text-base font-bold">
+                    Download our app now for free
+                  </h5>
+                  <p class="text-[12px] leading-tight">
+                    Scan the QR code or use the button below to download our
+                    iOS app.
+                  </p>
                 </div>
               </div>
+              <!-- Dummy QR Code -->
+              <div class="w-[93px] h-[93px] shrink-0 flex items-center justify-center">
+                <img src="./assets/images/icons/footer-apple-qr.svg" alt="iOS QR Code"
+                  class="w-full h-full object-contain" />
+              </div>
+            </div>
 
-              <!-- Android App Card -->
-              <div
-                class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all"
-              >
-                <div class="flex flex-col gap-[15px]">
-                  <div class="shrink-0">
-                    <img src="./assets/images/icons/footer-anroid.svg" alt="" />
-                  </div>
+            <!-- Android App Card -->
+            <div
+              class="rounded-[10px] border border-[rgba(255,255,255,.20)] bg-[rgba(255,255,255,0.06)] backdrop-blur-[4.697754383087158px] p-4 flex items-center justify-between gap-[15px] transition-all">
+              <div class="flex flex-col gap-[15px]">
+                <div class="shrink-0">
+                  <img src="./assets/images/icons/footer-anroid.svg" alt="" />
+                </div>
 
-                  <div class="flex flex-col gap-[3px]">
-                    <h5 class="text-base font-bold">
-                      Download our app now for free
-                    </h5>
-                    <p class="text-[12px] leading-tight">
-                      Scan the QR code or use the button below to download our
-                      Android app.
-                    </p>
-                  </div>
+                <div class="flex flex-col gap-[3px]">
+                  <h5 class="text-base font-bold">
+                    Download our app now for free
+                  </h5>
+                  <p class="text-[12px] leading-tight">
+                    Scan the QR code or use the button below to download our
+                    Android app.
+                  </p>
                 </div>
-                <!-- Dummy QR Code -->
-                <div
-                  class="w-[93px] h-[93px] shrink-0 flex items-center justify-center"
-                >
-                  <img
-                    src="./assets/images/icons/footer-anroid-qr.svg"
-                    alt="Anroid QR Code"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
+              </div>
+              <!-- Dummy QR Code -->
+              <div class="w-[93px] h-[93px] shrink-0 flex items-center justify-center">
+                <img src="./assets/images/icons/footer-anroid-qr.svg" alt="Anroid QR Code"
+                  class="w-full h-full object-contain" />
               </div>
             </div>
           </div>
         </div>
-
-        <div class="divider divider-up"></div>
       </div>
-    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="./index.js"></script>
-  </body>
+      <div class="divider divider-up"></div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+
 </html>
