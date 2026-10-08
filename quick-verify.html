@@ -175,9 +175,9 @@
 
           <div class="relative mt-2.5 md:mt-3.5 lg:mt-3">
             <form class="form text-left flex items-center relative w-full">
-              <div class="searchbar-glow-wrapper w-full">
+              <div class="searchbar-glow-wrapper w-full overflow-hidden">
                 <div
-                  class="searchbar-inner px-5 md:px-7 py-2.5 md:py-3 gap-4 flex-row"
+                  class="searchbar-inner px-3.5 sm:px-5 md:px-7 py-1.5 sm:py-2.5 md:py-3 gap-2 sm:gap-4 flex items-center justify-between overflow-hidden"
                 >
                   <div class="flex-1 min-w-0">
                     <input
@@ -185,13 +185,13 @@
                       name="verify"
                       id="verify"
                       placeholder="Type news to verify..."
-                      class="py-2 bg-transparent text-[16px] md:text-[18px] font-normal text-white w-full placeholder:text-[16px] md:placeholder:text-[18px] placeholder:font-normal placeholder:text-white/70 focus:outline-none focus:border-none"
+                      class="py-1.5 sm:py-2 bg-transparent text-sm sm:text-[16px] md:text-[18px] font-normal text-white w-full placeholder:text-sm sm:placeholder:text-[16px] md:placeholder:text-[18px] placeholder:font-normal placeholder:text-white/70 focus:outline-none focus:border-none"
                     />
                   </div>
                   <div class="shrink-0">
                     <button
                       type="button"
-                      class="flex items-center shadow-form rounded-full justify-center hover:opacity-100 gap-2 px-5 py-2.5 md:px-[24px] md:py-[13px] relative z-[1] before:content-[url('./assets/images/quick-verify-ai/form-button.png')] before:z-[-1] before:absolute before:inset-0 before:w-full before:h-full text-white font-medium text-sm md:text-base cursor-pointer"
+                      class="flex items-center shadow-form rounded-full justify-center hover:opacity-100 gap-1.5 sm:gap-2 px-3.5 sm:px-5 md:px-[24px] py-2 md:py-[13px] relative z-[1] before:content-[''] before:bg-[url('./assets/images/quick-verify-ai/form-button.png')] before:bg-cover before:bg-center before:bg-no-repeat before:z-[-1] before:absolute before:inset-0 before:w-full before:h-full before:rounded-full overflow-hidden text-white font-medium text-xs sm:text-sm md:text-base cursor-pointer"
                     >
                       Verify
                       <img
@@ -199,7 +199,7 @@
                         alt="Quick News"
                         width="24"
                         height="24"
-                        class="w-5 h-5 md:w-[26px] md:h-[26px]"
+                        class="w-4 h-4 sm:w-5 sm:h-5 md:w-[26px] md:h-[26px]"
                       />
                     </button>
                   </div>
